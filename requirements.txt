@@ -1,0 +1,4 @@
+pandas>=2.2,<3
+openpyxl>=3.1   # reads the ABS data cubes (.xlsx)
+matplotlib>=3.8
+pytest>=8.0

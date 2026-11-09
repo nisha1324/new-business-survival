@@ -1,6 +1,6 @@
 # New-business survival in Australia: which industries and regions new businesses last in
 
-**Status: work in progress (Part 1 of 5 done: source, snapshot and profile).**
+**Status: work in progress (Parts 1-2 of 5 done: source profile, industries).**
 
 About half of the businesses that start trading in Australia in a given year are no longer trading three
 Junes later. That rate is
@@ -67,13 +67,46 @@ The data reconciles where it should: data cube 1's 1,288 published rates all mat
 its groups add exactly to its totals, the detailed cubes' state totals match data cube 1 exactly, and the LGA
 cube's national totals match data cube 1's June counts for 2023, 2024 and 2025.
 
+## Part 2: which industries new businesses last in (`results/INDUSTRY_SURVIVAL.md`)
+
+Four entry cohorts by industry from data cube 1, then the 2021-22 entrants by industry × employment size from data
+cube 5, compared at a common size mix (each industry's survival in each size band, weighted by the national share of
+entrants in that band: non-employing 73.5%, 1-4 employees 24.1%, 5 or more 2.4%).
+
+- **The bottom of the table doesn't move.** Administrative and Support Services; Public Administration and Safety;
+  Transport, Postal and Warehousing; and Wholesale Trade are among the 5 industries with the lowest survival in all
+  four entry cohorts. Transport, Postal and Warehousing is lowest in the latest: 37.4% of its 55,118 2022-23
+  entrants were still trading three Junes on, against 49.2% for all industries.
+- **Survival fell in 16 of 19 industries** from the 2019-20 to the 2022-23 cohort. Retail Trade fell the most
+  (52.3% → 46.2%, −6.1 points).
+- **It isn't a shift towards sole traders.** On unrounded counts, national survival moved −1.7 points: −1.8 points
+  inside the size bands and +0.2 points from the size mix.
+- **Size mix flatters some industries.** At the national size mix, Accommodation and Food Services falls from 10th
+  to 4th lowest (48.4% → 41.9%), because only 40% of its entrants employ no one. In its Food and Beverage Services
+  subdivision (cafés, restaurants, takeaways, pubs and clubs), 35.2% of non-employing entrants were still trading,
+  against 54.7% of employing ones.
+- **An industry average can hide a wide gap.** Among the 54 subdivisions with 500+ entrants, survival at the
+  national size mix runs from 34.6% (Public Order, Safety and Regulatory Services) to 65.2% (Agriculture).
+- **About half of the three-year loss happens by the first June.** In every industry, 45% to 52% of the 2022-23
+  entrants that had stopped trading by the third June had already stopped by the first.
+
+![Common size mix](results/charts/07_common_size_mix.png)
+
+**What it means.** A lender should price a new business on its industry *and* its size: in every industry the
+non-employing rate is 4.4 to 22.0 points below the 1-4 employee rate, and an industry's rate moved by up to 7.7
+points across the four cohorts. Advisers should front-load support, since about half of the three-year loss has
+happened by the first June. Retail Trade's fall is the largest of any industry and worth explaining.
+
+The method was checked: the three size bands rebuild the published national rate to within 0.05 points, two
+bands instead of three give an identical ranking, and no rate is shown on a base of 20 or fewer.
+
 ## Plan
 
 | Part | What | Status |
 |---|---|---|
 | 1 | Source, download with pinned hashes, tidy snapshot, profile and rules | done |
-| 2 | Industries: survival within size bands, a common-size-mix comparison, subdivisions above the floor, cohort trends | next |
-| 3 | Regions: state survival across four cohorts, state × industry, LGA growth in business numbers | |
+| 2 | Industries: survival within size bands, a common-size-mix comparison, subdivisions above the floor, cohort trends | done |
+| 3 | Regions: state survival across four cohorts, state × industry, LGA growth in business numbers | next |
 | 4 | A DuckDB SQL layer and a benchmark table for lenders and advisers (industry × state × size, with reliability flags) | |
 | 5 | CI, recommendations, limitations and write-up | |
 
@@ -84,6 +117,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 python scripts/profile_source.py      # Part 1 report and charts from the committed snapshot
+python scripts/industry_survival.py   # Part 2 report and charts
 python -m pytest                      # tests
 
 # optional: rebuild the snapshot from the ABS files
@@ -96,9 +130,11 @@ python scripts/build_snapshot.py      # data/*.csv.gz and data/SNAPSHOT.json (by
 ```
 cabee/load.py               parse the ABS workbooks into tidy tables; read the snapshot
 cabee/profile.py            Part 1 checks and measures
+cabee/industries.py         Part 2: size bands, common size mix, cohort trends, shift-share split
 scripts/download_data.py    fetch the workbooks, check SHA-256
 scripts/build_snapshot.py   write data/*.csv.gz and data/SNAPSHOT.json
 scripts/profile_source.py   write results/SOURCE_PROFILE.md, CSVs and charts 01-05
+scripts/industry_survival.py  write results/INDUSTRY_SURVIVAL.md, CSVs and charts 06-09
 data/                       the tidy snapshot (survival, flows, subdivision_survival, lga_counts)
 results/                    reports, CSVs and charts
 tests/                      parser tests on hand-made sheets, snapshot invariants, report checks
@@ -106,7 +142,7 @@ tests/                      parser tests on hand-made sheets, snapshot invariant
 
 ## Tests
 
-55 tests: the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
+74 tests: the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
 invariants (entry cohorts equal that year's entries, start + entries − exits = end for every industry, every
 subdivision maps to an ANZSIC division, LGA totals equal the national count), the profile measures on hand-made
 frames, the real figures the report relies on, and a byte-for-byte regeneration of the Part 1 report, CSVs and
@@ -115,6 +151,15 @@ bugs were tried on a scratch copy: 14 were caught at first, and the 2 that survi
 a looser mismatch threshold) now have tests. README tests check that every Part 1 figure here appears in the
 generated report and stays with its subject; 14 planted errors in this README (changed figures, swapped subjects)
 were tried, 12 were caught at first, and the 2 survivors now have exact checks.
+
+Part 2 adds 19 tests: the measures on hand-made frames (size bands folded and summed over states, the floor at
+exactly 20, a common-mix rate left blank when a band is missing, a shift-share split whose parts add up and isolate
+each effect, cohort ranks), the real figures (the bands rebuild the published national rate, divisions add up to
+the national total within 10 businesses, subdivisions add up to divisions, no rate on a base of 20 or fewer, Part
+1's division rates reproduced exactly) and a byte-for-byte regeneration of the Part 2 outputs. 14 planted bugs in
+`cabee/industries.py` were tried on a scratch copy, and all 14 were caught. 19 planted errors in this
+README's Part 2 text were tried; 18 were caught at first, and the survivor ("about a third" for "about half")
+now has an exact check.
 
 ## Credit
 

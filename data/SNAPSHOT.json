@@ -1,0 +1,108 @@
+{
+  "source": "Australian Bureau of Statistics, Counts of Australian Businesses, including Entries and Exits (cat. no. 8165.0)",
+  "licence": "CC BY 4.0, (c) Commonwealth of Australia",
+  "inputs": {
+    "cabee_dc01_jun2019_jun2023.xlsx": {
+      "sha256": "60f05fc92e352c6121112bc241d518ec07975a17b226674a07b404c95214f035",
+      "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/jul2019-jun2023/8165DC01_revised.xlsx"
+    },
+    "cabee_dc01_jun2020_jun2024.xlsx": {
+      "sha256": "ceaa3012b99382994d3a76a0c85eba941654ad85ec0719221d32aea6e89f77a9",
+      "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/jul2020-jun2024/8165DC01.xlsx"
+    },
+    "cabee_dc01_jun2021_jun2025.xlsx": {
+      "sha256": "eb18f5df2f1df390122db9921df7e3c4a6098d29fec40529cd164537b3ab1746",
+      "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/jul2021-jun2025/8165DC01.xlsx"
+    },
+    "cabee_dc01_jun2022_jun2026.xlsx": {
+      "sha256": "477690c133eaf70e5671643be4e255ac22bca46b7db6d236f91744b3a40d2d79",
+      "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/jul2022-jun2026/8165DC01.xlsx"
+    },
+    "cabee_dc04_jun2021_jun2025.xlsx": {
+      "sha256": "f68901ea85e87619d68fd9dbc23e1f896b3986e73a8f7e8b24c775d7c0ec71a0",
+      "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/jul2021-jun2025/8165DC04.xlsx"
+    },
+    "cabee_dc05_jun2021_jun2025.xlsx": {
+      "sha256": "554a74698c57614109f874292d367daa2aa6387f4b5c629ddd6edc070adc53ee",
+      "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/jul2021-jun2025/8165DC05.xlsx"
+    },
+    "cabee_dc10_jun2021_jun2025.xlsx": {
+      "sha256": "69b73851ab31a3553092254b80509958692b613756436a1efb8629e74adb1d75",
+      "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/jul2021-jun2025/8165DC10.xlsx"
+    }
+  },
+  "outputs": {
+    "survival.csv.gz": {
+      "rows": 1372,
+      "columns": [
+        "release",
+        "dimension",
+        "cohort",
+        "start",
+        "cohort_june",
+        "section",
+        "group",
+        "level",
+        "base",
+        "survived_to",
+        "years_after",
+        "survived",
+        "rate_pub"
+      ],
+      "sha256": "2d35a8cc787b02f003121506a5b433e50c893224dd266b23c31a654218ae0d11"
+    },
+    "flows.csv.gz": {
+      "rows": 496,
+      "columns": [
+        "release",
+        "dimension",
+        "fin_year",
+        "group",
+        "level",
+        "operating_start",
+        "births",
+        "entries_other",
+        "entries",
+        "cancellations",
+        "exits_other",
+        "exits",
+        "net_movement",
+        "operating_end"
+      ],
+      "sha256": "08698763d0fd6012d76857248e7fa0101831b857a9f87f295518f3b586c830c6"
+    },
+    "subdivision_survival.csv.gz": {
+      "rows": 32928,
+      "columns": [
+        "cohort",
+        "cohort_june",
+        "state",
+        "subdivision_code",
+        "subdivision",
+        "division",
+        "level",
+        "size",
+        "base",
+        "survived_to",
+        "years_after",
+        "survived",
+        "rate_pub"
+      ],
+      "sha256": "35462fe91b9f391401b14a6fa3154ab8706f837de8e17ee25493deda9628caf7"
+    },
+    "lga_counts.csv.gz": {
+      "rows": 210726,
+      "columns": [
+        "june",
+        "state",
+        "lga_code",
+        "lga",
+        "division",
+        "industry",
+        "size",
+        "count"
+      ],
+      "sha256": "102f490e17801b3aa4b565cb057a6996981fb575edf26b3f6a8d402eba649981"
+    }
+  }
+}

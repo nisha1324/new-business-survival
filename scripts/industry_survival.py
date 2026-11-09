@@ -267,6 +267,7 @@ def main() -> int:
       f"({big.iloc[0]['subdivision']}) to {rate(big.iloc[-1]['std_2'])} ({big.iloc[-1]['subdivision']}). Within "
       f"{fnb['industry']}, {fnb['subdivision']} is at {rate(fnb['std_2'])} and {sd.loc['44', 'subdivision']} at "
       f"{rate(sd.loc['44', 'std_2'])}.")
+    assert 0.4 <= fjs.min() and fjs.max() <= 0.6, "'about half' no longer describes the first-June share"
     a(f"- **About half of the three-year loss happens by the first June.** In every industry, {pct(fjs.min(), 0)} to "
       f"{pct(fjs.max(), 0)} of the {last} entrants that had stopped trading by the third June had already stopped by "
       f"the first ({pct(nat_fjs, 0)} nationally).")

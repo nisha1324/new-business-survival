@@ -228,3 +228,93 @@ def test_part3_method_claims():
     assert "after its mix it is the weakest state" in _flat(REPORT3)
     assert "the weakest state once its mix is allowed for" in flat
     assert "the 303 LGAs with 1,000 or more businesses" in flat and "303 LGAs with 1,000 or more businesses" in REPORT3
+
+
+# ------------------------------------------------------- Part 4
+REPORT4 = (ROOT / "results" / "BENCHMARK.md").read_text()
+
+
+def in_report4(fig: str) -> bool:
+    tail = r"(?![\w%]|[.,]\d)" if not fig.endswith("%") else ""
+    return re.search(r"(?<![\w.,])" + re.escape(fig) + tail, REPORT4) is not None
+
+
+def _part4_text() -> str:
+    # the lookup's printed output is checked separately, against the script itself
+    return re.sub(r"```.*?```", "", section(README, "## Part 4"), flags=re.S)
+
+
+def test_every_part4_figure_is_in_the_report():
+    missing = sorted(f for f in figures(_part4_text()) if not in_report4(f))
+    assert not missing, f"README Part 4 figures not in BENCHMARK.md: {missing}"
+
+
+PAIRS4 = [
+    ("57 columns", "10", "6,052", "0 mismatches"),
+    ("32,508", "1 or 2"),
+    ("NT, 5+", "48.1%", "75.2%", "−27.1 points"),
+    ("10%", "0.86 points"),
+    ("4 small industries", "more than a point low"),
+    ("no industry more than 2 places", "bottom five are unchanged"),
+    ("97.9%", "441,808"),
+    ("15 of 152",),
+    ("Where both", "192 cells"),
+    ("3.19", "2.33"),
+    ("Tas", "5.42 → 3.05"),
+    ("all 85", "+16.6 points"),
+    ("50.2% (ACT)", "58.3% (WA)"),
+    ("30.3%", "70.9%"),
+    ("−1.4 points", "+6.0 points"),
+]
+
+
+def test_part4_figures_stay_with_their_subject():
+    for pair in PAIRS4:
+        readme = tuple(p.replace("Tas", "Tasmania") if p == "Tas" else p for p in pair)
+        assert _sentence_with(_part4_text(), *readme), f"README: {readme}"
+        assert _sentence_with(REPORT4, *pair), f"report: {pair}"
+
+
+PHRASES4 = [
+    "48.1% from the cells against 75.2% exact (−27.1 points)",
+    "the sum is within 0.86 points of the exact rate",
+    "moves no industry more than 2 places, and the bottom five are unchanged",
+    "cuts the average gap from 3.19 to 2.33 points",
+    "entrants with 1-4 employees out-survived non-employing ones in all 85",
+    "it runs from 50.2% (ACT) to 58.3% (WA)",
+    "run from 30.3% to 70.9%",
+]
+
+
+def test_part4_phrases_match_the_report():
+    flat = _flat(README).replace("Overall the adjustment cuts", "cuts").replace(
+        "Entrants with 1-4", "entrants with 1-4")
+    rep = _flat(REPORT4).replace("Entrants with 1-4", "entrants with 1-4")
+    for p in PHRASES4:
+        assert p in rep, f"report: {p}"
+        assert p in flat or p.replace("cuts the average gap from", "it cuts the average gap to the state's own rate "
+                                      "from") in flat, f"README: {p}"
+
+
+def test_part4_rules_and_method_claims():
+    flat = _flat(README)
+    from scripts.benchmark_report import MAX_SMALL_SHARE, RELIABLE_BASE, SMALL_BASE
+    assert (SMALL_BASE, RELIABLE_BASE, MAX_SMALL_SHARE) == (20, 100, 0.10)
+    assert "needs 100+ entrants and at most 10% of them in small cells" in flat
+    assert "cells of 20 or fewer" in flat
+    assert "doesn't help in Victoria or the Northern Territory" in flat
+    assert "doesn't help in Vic or NT" in _flat(REPORT4)
+    assert "It helps most where the state effect is largest: Tas (5.42 → 3.05)" in _flat(REPORT4)
+    assert "**Sums of small perturbed cells read low.**" in flat and "Summed cells read low" in REPORT4
+    assert "read high" not in _part4_text()
+    assert "Seven SQL files" in flat and len(list((ROOT / "sql").glob("[0-9][0-9]_*.sql"))) == 7
+
+
+def test_part4_lookup_example_is_the_real_output():
+    import subprocess, sys
+    block = re.search(r"```\n\$ (python scripts/benchmark_lookup\.py [^\n]+)\n(.*?)```", README, re.S)
+    assert block, "lookup example missing"
+    args = block.group(1).split()[2:]
+    out = subprocess.run([sys.executable, str(ROOT / "scripts" / "benchmark_lookup.py"), *args], cwd=ROOT,
+                         capture_output=True, text=True, check=True).stdout
+    assert out == block.group(2)

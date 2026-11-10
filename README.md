@@ -1,6 +1,6 @@
 # New-business survival in Australia: which industries and regions new businesses last in
 
-**Status: work in progress (Parts 1-3 of 5 done: source profile, industries, regions).**
+**Status: work in progress (Parts 1-4 of 5 done: source profile, industries, regions, SQL layer and benchmark).**
 
 About half of the businesses that start trading in Australia in a given year are no longer trading three
 Junes later. That rate is
@@ -137,6 +137,54 @@ The method was checked: a state's actual rate comes from data cube 5's state-tot
 exactly (summing its small perturbed cells would put the Northern Territory at 46.9% instead of 49.2%); with
 subdivision instead of division cells, each state's unexplained part moves by at most 0.18 points.
 
+## Part 4: a SQL layer and a survival benchmark for lenders and advisers (`results/BENCHMARK.md`)
+
+Seven SQL files in `sql/` rebuild the analysis as DuckDB views that read the committed CSVs directly, and add a
+benchmark: for every state × industry division × size band, the share of 2021-22 entrants still trading three
+Junes later (June 2025), with a flag saying how far it can be trusted.
+
+- **The SQL gives the same numbers as the pandas analysis.** 57 columns from 10 Part 1-3 tables (6,052 values)
+  were compared, with 0 mismatches.
+- **Sums of small perturbed cells read low.** The ABS perturbs the detailed survival cube, and across its 32,508
+  subdivision cells no count of 1 or 2 appears. Where both a sum of cells and an exact figure are published, the sum
+  reads low, worst for NT, 5+: 48.1% from the cells against 75.2% exact (−27.1 points). Where at most 10% of
+  entrants are in cells of 20 or fewer, the sum is within 0.86 points of the exact rate. So a **reliable** rate needs
+  100+ entrants and at most 10% of them in small cells; others are shown as **use with care** or not at all.
+- **Part 2's ranking holds.** 4 small industries read more than a point low, but correcting for it moves no
+  industry more than 2 places, and the bottom five are unchanged.
+- **The benchmark covers 97.9% of the 441,808 entrants.** It is the state's own rate where that is reliable,
+  otherwise the national rate for the industry and size band plus Part 3's state adjustment. For businesses with 5+
+  employees there is a benchmark in only 15 of 152 cells, so the report gives each state's exact all-industry rate
+  for them instead.
+- **The state adjustment earns its place.** Where both rates are reliable (192 cells), it cuts the average gap to
+  the state's own rate from 3.19 to 2.33 points. It helps most in Tasmania (5.42 → 3.05), and on the simple average
+  doesn't help in Victoria or the Northern Territory, where the adjustments are small.
+- **Employing entrants last longer everywhere.** Entrants with 1-4 employees out-survived non-employing ones in all 85 state ×
+  industry pairs where both are reliable (median gap +16.6 points).
+
+![Benchmark grid](results/charts/17_benchmark_grid.png)
+
+A café or takeaway with 1-4 staff (Accommodation and Food Services): where the state's own rate is reliable it runs
+from 50.2% (ACT) to 58.3% (WA). The Northern Territory has only 90 such entrants, so the lookup falls back:
+
+```
+$ python scripts/benchmark_lookup.py food NT 1-4
+Accommodation and Food Services, 1-4 employees, Northern Territory: businesses that entered in 2021-22
+  entrants here:         90
+  own rate:              40.0% (use with care)
+  national rate:         53.9% (reliable, 9,868 entrants)
+  state adjustment:      +0.6 points
+  benchmark:             54.5% (national + state adjustment)
+  = share still trading in June 2025, three Junes after entry. Still trading isn't the same as profitable.
+```
+
+**What it means.** Lenders and investors should start from the benchmark, not the national average: reliable
+national rates for an industry and size band run from 30.3% to 70.9%, while the state adjustment moves them by
+−1.4 points to +6.0 points. The flag belongs in the credit file, because a "use with care" rate should widen the
+range considered, not set the price. For entrants with 5+ employees this release's industry detail is too thin and
+too perturbed to use. Analysts can query the views from any DuckDB client, but should check how much of
+any sum sits in small cells before trusting it.
+
 ## Plan
 
 | Part | What | Status |
@@ -144,8 +192,8 @@ subdivision instead of division cells, each state's unexplained part moves by at
 | 1 | Source, download with pinned hashes, tidy snapshot, profile and rules | done |
 | 2 | Industries: survival within size bands, a common-size-mix comparison, subdivisions above the floor, cohort trends | done |
 | 3 | Regions: state survival across four cohorts, states after their industry × size mix, LGA growth in business numbers | done |
-| 4 | A DuckDB SQL layer and a benchmark table for lenders and advisers (industry × state × size, with reliability flags) | next |
-| 5 | CI, recommendations, limitations and write-up | |
+| 4 | A DuckDB SQL layer and a benchmark table for lenders and advisers (industry × state × size, with reliability flags) | done |
+| 5 | CI, recommendations, limitations and write-up | next |
 
 ## How to run
 
@@ -156,6 +204,8 @@ pip install -r requirements.txt
 python scripts/profile_source.py      # Part 1 report and charts from the committed snapshot
 python scripts/industry_survival.py   # Part 2 report and charts
 python scripts/regions_report.py      # Part 3 report and charts
+python scripts/benchmark_report.py    # Part 4: runs sql/ in DuckDB, writes the benchmark, report and charts
+python scripts/benchmark_lookup.py construction Vic non-employing   # one benchmark, in plain English
 python -m pytest                      # tests
 
 # optional: rebuild the snapshot from the ABS files
@@ -170,11 +220,15 @@ cabee/load.py               parse the ABS workbooks into tidy tables; read the s
 cabee/profile.py            Part 1 checks and measures
 cabee/industries.py         Part 2: size bands, common size mix, cohort trends, shift-share split
 cabee/regions.py            Part 3: states by cohort, expected rates from the mix, LGA growth
+cabee/sql.py                Part 4: run sql/ in DuckDB over data/, compare the views with Parts 1-3
+sql/01-07_*.sql             Part 4: views over the snapshot, perturbation check, benchmark
 scripts/download_data.py    fetch the workbooks, check SHA-256
 scripts/build_snapshot.py   write data/*.csv.gz and data/SNAPSHOT.json
 scripts/profile_source.py   write results/SOURCE_PROFILE.md, CSVs and charts 01-05
 scripts/industry_survival.py  write results/INDUSTRY_SURVIVAL.md, CSVs and charts 06-09
 scripts/regions_report.py   write results/REGIONS.md, CSVs and charts 10-14
+scripts/benchmark_report.py write results/BENCHMARK.md, benchmark.csv, the checks and charts 15-17
+scripts/benchmark_lookup.py the benchmark for one industry, state and size band
 data/                       the tidy snapshot (survival, flows, subdivision_survival, lga_counts)
 results/                    reports, CSVs and charts
 tests/                      parser tests on hand-made sheets, snapshot invariants, report checks
@@ -182,7 +236,7 @@ tests/                      parser tests on hand-made sheets, snapshot invariant
 
 ## Tests
 
-95 tests: the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
+125 tests: Part 1's cover the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
 invariants (entry cohorts equal that year's entries, start + entries − exits = end for every industry, every
 subdivision maps to an ANZSIC division, LGA totals equal the national count), the profile measures on hand-made
 frames, the real figures the report relies on, and a byte-for-byte regeneration of the Part 1 report, CSVs and
@@ -210,6 +264,15 @@ total, the small-cell bias, the three cell definitions agree, the LGA size bands
 regeneration of the Part 3 outputs. 18 planted bugs in `cabee/regions.py` were tried on a scratch copy, and all 18
 were caught. 26 planted errors in this README's Part 3 text were tried; 25 were caught at first, and the survivor
 ("strongest" for "weakest") now has an exact check.
+
+Part 4 adds 30 tests (25 in `tests/test_sql.py`, 5 README checks): every view is defined and runs over a
+copy of the data in another folder, the reliability rule at its boundaries (20, 21, 99 and 100 entrants; exactly
+10% in small cells), the SQL vs pandas comparison (and that the comparison itself catches a changed value or a
+missing row), the benchmark rebuilt independently in pandas for all 456 cells, the perturbation check rebuilt in
+pandas, the fit check on real and hand-made rows (including a tie), the lookup, and a byte-for-byte regeneration of
+the Part 4 outputs. 14 planted bugs in `sql/` and the lookup were tried: 13 were caught at first, and the survivor
+(a tie counted as "closer") now has a hand-made test. 21 planted errors in this README's Part 4 text were tried; 20 were caught at
+first, and the survivor ("read high" for "read low") now has an exact check.
 
 ## Credit
 

@@ -1,0 +1,58 @@
+part,table,column,rows,mismatches,max_abs_diff
+1,headline: national entrants,entries,4,0,0.0
+1,headline: national entrants,entries_survived,4,0,0.0
+1,headline: national entrants,entries_rate,4,0,0.0
+2,division_trend: rate per cohort,2019-20,19,0,0.0
+2,division_trend: rate per cohort,2020-21,19,0,0.0
+2,division_trend: rate per cohort,2021-22,19,0,0.0
+2,division_trend: rate per cohort,2022-23,19,0,0.0
+2,division_trend: latest rank and change,rank_latest,19,0,0.0
+2,division_trend: latest rank and change,change,19,0,0.0
+2,national_bands,base,12,0,0.0
+2,national_bands,survived,12,0,0.0
+2,national_bands,weight,12,0,0.0
+2,national_bands,rate,12,0,0.0
+2,division_bands,industry,19,0,
+2,division_bands,entries,19,0,0.0
+2,division_bands,non_employing_share,19,0,0.0
+2,division_bands,rate_all,19,0,0.0
+2,division_bands,rate_Non-employing,19,0,0.0
+2,division_bands,rate_1-4,19,0,0.0
+2,division_bands,rate_5+,19,0,0.0
+2,division_bands,base_5+,19,0,0.0
+2,division_bands,std,19,0,0.0
+2,division_bands,mix_effect,19,0,0.0
+2,division_bands,rank_std,19,0,0.0
+2,division_bands,rank_rate_all,19,0,0.0
+3,state_cohorts: rate per cohort,2019-20,9,0,0.0
+3,state_cohorts: rate per cohort,2020-21,9,0,0.0
+3,state_cohorts: rate per cohort,2021-22,9,0,0.0
+3,state_cohorts: rate per cohort,2022-23,9,0,0.0
+3,state_bands,entries,8,0,0.0
+3,state_bands,non_employing_share,8,0,0.0
+3,state_bands,rate_all,8,0,0.0
+3,state_bands,rate_Non-employing,8,0,0.0
+3,state_bands,rate_1-4,8,0,0.0
+3,state_bands,rate_5+,8,0,0.0
+3,state_bands,std,8,0,0.0
+3,expected (division x band),cell_base,8,0,0.0
+3,expected (division x band),expected,8,0,0.0
+3,expected (division x band),cells_actual,8,0,0.0
+3,expected (division x band),national_cells,8,0,0.0
+3,mix_split,actual,8,0,0.0
+3,mix_split,expected,8,0,0.0
+3,mix_split,gap,8,0,0.0
+3,mix_split,mix,8,0,0.0
+3,mix_split,local,8,0,0.0
+3,mix_split,residual,8,0,0.0
+3,mix_split,rank_local,8,0,0.0
+3,lga_growth,businesses_2023,547,0,0.0
+3,lga_growth,businesses_2025,547,0,0.0
+3,lga_growth,employing_2023,547,0,0.0
+3,lga_growth,employing_2025,547,0,0.0
+3,lga_growth,change,547,0,0.0
+3,lga_growth,growth,547,0,0.0
+3,lga_growth,employing_change,547,0,0.0
+3,lga_growth,employing_growth,547,0,0.0
+3,lga_growth,top_division,547,0,
+3,lga_growth,top_division_change,547,0,0.0

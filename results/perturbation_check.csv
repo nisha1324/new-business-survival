@@ -1,0 +1,44 @@
+check_type,label,band,entrants,small_share,rate_cells,rate_exact,bias
+state x size band,"Vic, Non-employing",Non-employing,111584.0,0.0014,40.3866,40.3907,-0.0041
+state x size band,"NSW, Non-employing",Non-employing,100843.0,0.0016,43.2554,43.2583,-0.003
+state x size band,"Qld, Non-employing",Non-employing,56100.0,0.0031,45.4082,45.4092,-0.001
+state x size band,"NSW, 1-4",1-4,39284.0,0.0043,57.209,57.2287,-0.0196
+state x size band,"Vic, 1-4",1-4,27627.0,0.0068,60.6472,60.65,-0.0028
+state x size band,"WA, Non-employing",Non-employing,28264.0,0.007,47.0103,47.044,-0.0337
+state x size band,"Qld, 1-4",1-4,21279.0,0.0109,61.8168,61.8555,-0.0387
+state x size band,"SA, Non-employing",Non-employing,17841.0,0.0134,48.2036,48.2399,-0.0363
+state x size band,"WA, 1-4",1-4,8956.0,0.026,64.013,64.1844,-0.1715
+state x size band,"SA, 1-4",1-4,4900.0,0.0586,63.1224,63.2695,-0.147
+state x size band,"Tas, Non-employing",Non-employing,4244.0,0.0653,50.0943,50.0941,0.0002
+state x size band,"ACT, Non-employing",Non-employing,4262.0,0.0765,44.1107,44.7133,-0.6026
+state x size band,"ACT, 1-4",1-4,2166.0,0.102,58.7258,59.7685,-1.0428
+state x size band,"NT, Non-employing",Non-employing,1893.0,0.1247,41.7855,42.5105,-0.725
+state x size band,"Tas, 1-4",1-4,1685.0,0.1549,63.1454,64.8633,-1.7179
+state x size band,"NSW, 5+",5+,3328.0,0.1626,64.7236,66.5764,-1.8529
+state x size band,"Vic, 5+",5+,2818.0,0.2165,68.8432,71.0818,-2.2386
+state x size band,"NT, 1-4",1-4,750.0,0.24,59.6,62.1551,-2.5551
+state x size band,"Qld, 5+",5+,2141.0,0.2681,68.426,71.5626,-3.1367
+state x size band,"WA, 5+",5+,1060.0,0.4217,68.6792,73.0159,-4.3366
+state x size band,"SA, 5+",5+,659.0,0.5281,66.6161,73.2523,-6.6362
+state x size band,"Tas, 5+",5+,206.0,0.7573,64.5631,76.4706,-11.9075
+state x size band,"ACT, 5+",5+,170.0,0.8,52.9412,64.7727,-11.8316
+state x size band,"NT, 5+",5+,108.0,1.0,48.1481,75.2381,-27.0899
+industry division,"Professional, Scientific and Technical Services",All sizes,55410.0,0.0026,50.9565,50.9664,-0.0099
+industry division,Construction,All sizes,80343.0,0.0033,46.7533,46.7661,-0.0128
+industry division,Other Services,All sizes,24975.0,0.0034,47.1752,47.2167,-0.0415
+industry division,Administrative and Support Services,All sizes,28116.0,0.0043,39.1841,39.2211,-0.037
+industry division,"Rental, Hiring and Real Estate Services",All sizes,38203.0,0.0043,58.8671,58.878,-0.0109
+industry division,"Transport, Postal and Warehousing",All sizes,54864.0,0.0089,35.0102,35.1284,-0.1182
+industry division,Accommodation and Food Services,All sizes,19897.0,0.0094,48.344,48.4245,-0.0806
+industry division,Health Care and Social Assistance,All sizes,28382.0,0.0122,58.6534,58.7968,-0.1434
+industry division,Financial and Insurance Services,All sizes,20387.0,0.0129,51.8958,51.9941,-0.0983
+industry division,Retail Trade,All sizes,27858.0,0.0162,44.594,44.6574,-0.0634
+industry division,"Agriculture, Forestry and Fishing",All sizes,15502.0,0.0241,60.9534,61.0674,-0.114
+industry division,Education and Training,All sizes,7974.0,0.0357,50.3888,50.6326,-0.2438
+industry division,Arts and Recreation Services,All sizes,7269.0,0.0446,48.2047,48.5911,-0.3864
+industry division,Wholesale Trade,All sizes,11696.0,0.0551,43.6389,44.0267,-0.3878
+industry division,Manufacturing,All sizes,12778.0,0.0959,49.8513,50.7082,-0.8569
+industry division,Information Media and Telecommunications,All sizes,4386.0,0.1354,46.1012,47.342,-1.2408
+industry division,Public Administration and Safety,All sizes,1627.0,0.1371,35.2797,36.5989,-1.3192
+industry division,"Electricity, Gas, Water and Waste Services",All sizes,1315.0,0.1962,45.3232,47.3045,-1.9813
+industry division,Mining,All sizes,1182.0,0.2327,52.1997,54.3919,-2.1922

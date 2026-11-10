@@ -1,0 +1,457 @@
+state,abbr,division,industry,band,entrants,survived,small_share,observed,observed_flag,national_entrants,national_small_share,national_rate,national_flag,state_adjustment,benchmark,benchmark_source,observed_vs_national
+New South Wales,NSW,A,"Agriculture, Forestry and Fishing",Non-employing,4340.0,2570.0,0.003,59.2166,reliable,12724.0,0.0117,58.8651,reliable,-1.3803,59.2166,this state,0.3515
+New South Wales,NSW,A,"Agriculture, Forestry and Fishing",1-4,820.0,563.0,0.0232,68.6585,reliable,2482.0,0.0528,70.9106,reliable,-1.3803,68.6585,this state,-2.252
+New South Wales,NSW,A,"Agriculture, Forestry and Fishing",5+,79.0,47.0,0.1013,59.4937,use with care,288.0,0.2951,68.0556,use with care,-1.3803,,none,-8.5619
+New South Wales,NSW,B,Mining,Non-employing,134.0,67.0,0.1866,50.0,use with care,838.0,0.1527,48.0907,use with care,-1.3803,,none,1.9093
+New South Wales,NSW,B,Mining,1-4,56.0,39.0,0.1964,69.6429,use with care,297.0,0.3367,66.33,use with care,-1.3803,,none,3.3129
+New South Wales,NSW,B,Mining,5+,6.0,0.0,1.0,,no rate,44.0,1.0,38.6364,use with care,-1.3803,,none,
+New South Wales,NSW,C,Manufacturing,Non-employing,2555.0,1051.0,0.0047,41.135,reliable,8325.0,0.0388,42.8348,reliable,-1.3803,41.135,this state,-1.6998
+New South Wales,NSW,C,Manufacturing,1-4,1288.0,750.0,0.0179,58.2298,reliable,3792.0,0.1036,62.6582,use with care,-1.3803,58.2298,this state,-4.4284
+New South Wales,NSW,C,Manufacturing,5+,185.0,121.0,0.5676,65.4054,use with care,625.0,0.7584,66.56,use with care,-1.3803,,none,-1.1546
+New South Wales,NSW,D,"Electricity, Gas, Water and Waste Services",Non-employing,304.0,113.0,0.0526,37.1711,reliable,890.0,0.1461,41.9101,use with care,-1.3803,37.1711,this state,-4.7391
+New South Wales,NSW,D,"Electricity, Gas, Water and Waste Services",1-4,124.0,56.0,0.0242,45.1613,reliable,366.0,0.1885,51.6393,use with care,-1.3803,45.1613,this state,-6.4781
+New South Wales,NSW,D,"Electricity, Gas, Water and Waste Services",5+,13.0,6.0,1.0,,no rate,56.0,1.0,60.7143,use with care,-1.3803,,none,
+New South Wales,NSW,E,Construction,Non-employing,19037.0,7561.0,0.0,39.7174,reliable,58536.0,0.0003,41.5454,reliable,-1.3803,39.7174,this state,-1.828
+New South Wales,NSW,E,Construction,1-4,8323.0,4770.0,0.0,57.3111,reliable,20950.0,0.0015,60.5728,reliable,-1.3803,57.3111,this state,-3.2617
+New South Wales,NSW,E,Construction,5+,246.0,147.0,0.1301,59.7561,use with care,828.0,0.2283,66.5459,use with care,-1.3803,,none,-6.7898
+New South Wales,NSW,F,Wholesale Trade,Non-employing,2620.0,959.0,0.0,36.6031,reliable,7847.0,0.022,38.537,reliable,-1.3803,36.6031,this state,-1.934
+New South Wales,NSW,F,Wholesale Trade,1-4,1348.0,673.0,0.0,49.9258,reliable,3476.0,0.0351,53.3947,reliable,-1.3803,49.9258,this state,-3.4689
+New South Wales,NSW,F,Wholesale Trade,5+,108.0,76.0,1.0,70.3704,use with care,329.0,0.9271,62.31,use with care,-1.3803,,none,8.0603
+New South Wales,NSW,G,Retail Trade,Non-employing,5798.0,2133.0,0.0,36.7885,reliable,18586.0,0.0025,37.7865,reliable,-1.3803,36.7885,this state,-0.998
+New South Wales,NSW,G,Retail Trade,1-4,2884.0,1530.0,0.0,53.0513,reliable,8150.0,0.012,56.3926,reliable,-1.3803,53.0513,this state,-3.3413
+New South Wales,NSW,G,Retail Trade,5+,368.0,268.0,0.1141,72.8261,use with care,1086.0,0.2486,72.6519,use with care,-1.3803,,none,0.1742
+New South Wales,NSW,H,Accommodation and Food Services,Non-employing,2400.0,896.0,0.0,37.3333,reliable,7871.0,0.0022,37.2888,reliable,-1.3803,37.3333,this state,0.0446
+New South Wales,NSW,H,Accommodation and Food Services,1-4,3267.0,1663.0,0.0,50.903,reliable,9868.0,0.0026,53.8914,reliable,-1.3803,50.903,this state,-2.9884
+New South Wales,NSW,H,Accommodation and Food Services,5+,661.0,399.0,0.0151,60.3631,reliable,2139.0,0.0584,63.8616,reliable,-1.3803,60.3631,this state,-3.4985
+New South Wales,NSW,I,"Transport, Postal and Warehousing",Non-employing,11557.0,3693.0,0.0013,31.9547,reliable,48577.0,0.0024,32.6183,reliable,-1.3803,31.9547,this state,-0.6637
+New South Wales,NSW,I,"Transport, Postal and Warehousing",1-4,2159.0,1062.0,0.0125,49.1894,reliable,5981.0,0.0247,54.0712,reliable,-1.3803,49.1894,this state,-4.8818
+New South Wales,NSW,I,"Transport, Postal and Warehousing",5+,93.0,45.0,0.3441,48.3871,use with care,275.0,0.6982,45.8182,use with care,-1.3803,,none,2.5689
+New South Wales,NSW,J,Information Media and Telecommunications,Non-employing,1147.0,490.0,0.0192,42.7201,reliable,3174.0,0.075,43.1632,reliable,-1.3803,42.7201,this state,-0.4431
+New South Wales,NSW,J,Information Media and Telecommunications,1-4,445.0,250.0,0.0831,56.1798,reliable,1051.0,0.2369,55.6613,use with care,-1.3803,56.1798,this state,0.5185
+New South Wales,NSW,J,Information Media and Telecommunications,5+,75.0,38.0,0.28,50.6667,use with care,153.0,0.6471,41.8301,use with care,-1.3803,,none,8.8366
+New South Wales,NSW,K,Financial and Insurance Services,Non-employing,6536.0,3039.0,0.0026,46.4963,reliable,16050.0,0.0037,49.1153,reliable,-1.3803,46.4963,this state,-2.6189
+New South Wales,NSW,K,Financial and Insurance Services,1-4,1729.0,1032.0,0.0046,59.6877,reliable,4060.0,0.0158,61.3793,reliable,-1.3803,59.6877,this state,-1.6916
+New South Wales,NSW,K,Financial and Insurance Services,5+,85.0,68.0,0.2706,80.0,use with care,263.0,0.4791,77.9468,use with care,-1.3803,,none,2.0532
+New South Wales,NSW,L,"Rental, Hiring and Real Estate Services",Non-employing,11668.0,6685.0,0.0,57.2935,reliable,33845.0,0.0,58.3099,reliable,-1.3803,57.2935,this state,-1.0165
+New South Wales,NSW,L,"Rental, Hiring and Real Estate Services",1-4,1479.0,879.0,0.0,59.432,reliable,4094.0,0.0085,62.7748,reliable,-1.3803,59.432,this state,-3.3427
+New South Wales,NSW,L,"Rental, Hiring and Real Estate Services",5+,64.0,50.0,0.2344,78.125,use with care,240.0,0.4458,75.0,use with care,-1.3803,,none,3.125
+New South Wales,NSW,M,"Professional, Scientific and Technical Services",Non-employing,13041.0,5789.0,0.0,44.3908,reliable,37749.0,0.0,44.8754,reliable,-1.3803,44.3908,this state,-0.4846
+New South Wales,NSW,M,"Professional, Scientific and Technical Services",1-4,6621.0,4145.0,0.0,62.6038,reliable,16703.0,0.0009,63.5574,reliable,-1.3803,62.6038,this state,-0.9536
+New South Wales,NSW,M,"Professional, Scientific and Technical Services",5+,314.0,233.0,0.035,74.2038,reliable,898.0,0.1192,73.8307,use with care,-1.3803,74.2038,this state,0.3731
+New South Wales,NSW,N,Administrative and Support Services,Non-employing,5505.0,1941.0,0.0,35.2589,reliable,21422.0,0.0,34.4226,reliable,-1.3803,35.2589,this state,0.8363
+New South Wales,NSW,N,Administrative and Support Services,1-4,2192.0,1090.0,0.0,49.7263,reliable,5762.0,0.0,53.5751,reliable,-1.3803,49.7263,this state,-3.8489
+New South Wales,NSW,N,Administrative and Support Services,5+,338.0,197.0,0.0237,58.284,reliable,919.0,0.1164,60.0653,use with care,-1.3803,58.284,this state,-1.7813
+New South Wales,NSW,O,Public Administration and Safety,Non-employing,383.0,96.0,0.0131,25.0653,reliable,1144.0,0.0743,30.3322,reliable,-1.3803,25.0653,this state,-5.2669
+New South Wales,NSW,O,Public Administration and Safety,1-4,171.0,76.0,0.0585,44.4444,reliable,384.0,0.1641,49.7396,use with care,-1.3803,44.4444,this state,-5.2951
+New South Wales,NSW,O,Public Administration and Safety,5+,20.0,9.0,1.0,,no rate,99.0,0.7576,36.3636,use with care,-1.3803,,none,
+New South Wales,NSW,P,Education and Training,Non-employing,1640.0,733.0,0.0,44.6951,reliable,5409.0,0.0152,43.2982,reliable,-1.3803,44.6951,this state,1.3969
+New South Wales,NSW,P,Education and Training,1-4,745.0,442.0,0.0,59.3289,reliable,2053.0,0.0219,61.5197,reliable,-1.3803,59.3289,this state,-2.1909
+New South Wales,NSW,P,Education and Training,5+,123.0,88.0,0.2276,71.5447,use with care,512.0,0.3086,80.6641,use with care,-1.3803,,none,-9.1193
+New South Wales,NSW,Q,Health Care and Social Assistance,Non-employing,5935.0,3274.0,0.0,55.1643,reliable,19665.0,0.0028,54.7877,reliable,-1.3803,55.1643,this state,0.3766
+New South Wales,NSW,Q,Health Care and Social Assistance,1-4,2544.0,1653.0,0.002,64.9764,reliable,7561.0,0.0071,66.9356,reliable,-1.3803,64.9764,this state,-1.9592
+New South Wales,NSW,Q,Health Care and Social Assistance,5+,392.0,255.0,0.0995,65.051,reliable,1149.0,0.1993,70.4091,use with care,-1.3803,65.051,this state,-5.358
+New South Wales,NSW,R,Arts and Recreation Services,Non-employing,1706.0,765.0,0.0193,44.8417,reliable,5464.0,0.021,44.4546,reliable,-1.3803,44.8417,this state,0.3871
+New South Wales,NSW,R,Arts and Recreation Services,1-4,534.0,294.0,0.0412,55.0562,reliable,1602.0,0.068,60.2996,reliable,-1.3803,55.0562,this state,-5.2434
+New South Wales,NSW,R,Arts and Recreation Services,5+,67.0,39.0,0.2985,58.209,use with care,196.0,0.4745,54.0816,use with care,-1.3803,,none,4.1273
+New South Wales,NSW,S,Other Services,Non-employing,4424.0,1735.0,0.0,39.2179,reliable,16585.0,0.0,39.6503,reliable,-1.3803,39.2179,this state,-0.4324
+New South Wales,NSW,S,Other Services,1-4,2550.0,1504.0,0.0,58.9804,reliable,7994.0,0.0,61.7088,reliable,-1.3803,58.9804,this state,-2.7284
+New South Wales,NSW,S,Other Services,5+,91.0,68.0,0.0,74.7253,use with care,382.0,0.1832,70.6806,use with care,-1.3803,,none,4.0446
+Victoria,Vic,A,"Agriculture, Forestry and Fishing",Non-employing,2682.0,1571.0,0.0037,58.5757,reliable,12724.0,0.0117,58.8651,reliable,-0.9888,58.5757,this state,-0.2894
+Victoria,Vic,A,"Agriculture, Forestry and Fishing",1-4,560.0,386.0,0.0536,68.9286,reliable,2482.0,0.0528,70.9106,reliable,-0.9888,68.9286,this state,-1.982
+Victoria,Vic,A,"Agriculture, Forestry and Fishing",5+,69.0,53.0,0.1304,76.8116,use with care,288.0,0.2951,68.0556,use with care,-0.9888,,none,8.756
+Victoria,Vic,B,Mining,Non-employing,100.0,42.0,0.24,42.0,use with care,838.0,0.1527,48.0907,use with care,-0.9888,,none,-6.0907
+Victoria,Vic,B,Mining,1-4,27.0,18.0,1.0,66.6667,use with care,297.0,0.3367,66.33,use with care,-0.9888,,none,0.3367
+Victoria,Vic,B,Mining,5+,6.0,3.0,1.0,,no rate,44.0,1.0,38.6364,use with care,-0.9888,,none,
+Victoria,Vic,C,Manufacturing,Non-employing,2415.0,1026.0,0.0128,42.4845,reliable,8325.0,0.0388,42.8348,reliable,-0.9888,42.4845,this state,-0.3504
+Victoria,Vic,C,Manufacturing,1-4,988.0,614.0,0.0273,62.1457,reliable,3792.0,0.1036,62.6582,use with care,-0.9888,62.1457,this state,-0.5125
+Victoria,Vic,C,Manufacturing,5+,171.0,113.0,0.7485,66.0819,use with care,625.0,0.7584,66.56,use with care,-0.9888,,none,-0.4781
+Victoria,Vic,D,"Electricity, Gas, Water and Waste Services",Non-employing,267.0,122.0,0.0599,45.6929,reliable,890.0,0.1461,41.9101,use with care,-0.9888,45.6929,this state,3.7828
+Victoria,Vic,D,"Electricity, Gas, Water and Waste Services",1-4,104.0,58.0,0.1827,55.7692,use with care,366.0,0.1885,51.6393,use with care,-0.9888,,none,4.1299
+Victoria,Vic,D,"Electricity, Gas, Water and Waste Services",5+,19.0,15.0,1.0,,no rate,56.0,1.0,60.7143,use with care,-0.9888,,none,
+Victoria,Vic,E,Construction,Non-employing,18839.0,7640.0,0.0,40.5542,reliable,58536.0,0.0003,41.5454,reliable,-0.9888,40.5542,this state,-0.9912
+Victoria,Vic,E,Construction,1-4,5158.0,3170.0,0.0,61.4579,reliable,20950.0,0.0015,60.5728,reliable,-0.9888,61.4579,this state,0.8851
+Victoria,Vic,E,Construction,5+,243.0,170.0,0.1646,69.9588,use with care,828.0,0.2283,66.5459,use with care,-0.9888,,none,3.413
+Victoria,Vic,F,Wholesale Trade,Non-employing,2595.0,953.0,0.0,36.7245,reliable,7847.0,0.022,38.537,reliable,-0.9888,36.7245,this state,-1.8126
+Victoria,Vic,F,Wholesale Trade,1-4,1004.0,550.0,0.0,54.7809,reliable,3476.0,0.0351,53.3947,reliable,-0.9888,54.7809,this state,1.3862
+Victoria,Vic,F,Wholesale Trade,5+,96.0,62.0,0.75,64.5833,use with care,329.0,0.9271,62.31,use with care,-0.9888,,none,2.2733
+Victoria,Vic,G,Retail Trade,Non-employing,6673.0,2457.0,0.0,36.82,reliable,18586.0,0.0025,37.7865,reliable,-0.9888,36.82,this state,-0.9665
+Victoria,Vic,G,Retail Trade,1-4,2394.0,1390.0,0.0,58.0618,reliable,8150.0,0.012,56.3926,reliable,-0.9888,58.0618,this state,1.6692
+Victoria,Vic,G,Retail Trade,5+,233.0,164.0,0.2275,70.3863,use with care,1086.0,0.2486,72.6519,use with care,-0.9888,,none,-2.2657
+Victoria,Vic,H,Accommodation and Food Services,Non-employing,2959.0,1031.0,0.0,34.8429,reliable,7871.0,0.0022,37.2888,reliable,-0.9888,34.8429,this state,-2.4459
+Victoria,Vic,H,Accommodation and Food Services,1-4,2771.0,1539.0,0.0,55.5395,reliable,9868.0,0.0026,53.8914,reliable,-0.9888,55.5395,this state,1.6482
+Victoria,Vic,H,Accommodation and Food Services,5+,536.0,352.0,0.0466,65.6716,reliable,2139.0,0.0584,63.8616,reliable,-0.9888,65.6716,this state,1.81
+Victoria,Vic,I,"Transport, Postal and Warehousing",Non-employing,22981.0,7032.0,0.0007,30.5992,reliable,48577.0,0.0024,32.6183,reliable,-0.9888,30.5992,this state,-2.0191
+Victoria,Vic,I,"Transport, Postal and Warehousing",1-4,1718.0,975.0,0.0058,56.752,reliable,5981.0,0.0247,54.0712,reliable,-0.9888,56.752,this state,2.6808
+Victoria,Vic,I,"Transport, Postal and Warehousing",5+,58.0,29.0,0.6207,50.0,use with care,275.0,0.6982,45.8182,use with care,-0.9888,,none,4.1818
+Victoria,Vic,J,Information Media and Telecommunications,Non-employing,999.0,434.0,0.018,43.4434,reliable,3174.0,0.075,43.1632,reliable,-0.9888,43.4434,this state,0.2802
+Victoria,Vic,J,Information Media and Telecommunications,1-4,247.0,158.0,0.1296,63.9676,use with care,1051.0,0.2369,55.6613,use with care,-0.9888,,none,8.3063
+Victoria,Vic,J,Information Media and Telecommunications,5+,43.0,22.0,1.0,51.1628,use with care,153.0,0.6471,41.8301,use with care,-0.9888,,none,9.3327
+Victoria,Vic,K,Financial and Insurance Services,Non-employing,4579.0,2306.0,0.0024,50.3603,reliable,16050.0,0.0037,49.1153,reliable,-0.9888,50.3603,this state,1.2451
+Victoria,Vic,K,Financial and Insurance Services,1-4,1033.0,613.0,0.0039,59.3417,reliable,4060.0,0.0158,61.3793,reliable,-0.9888,59.3417,this state,-2.0376
+Victoria,Vic,K,Financial and Insurance Services,5+,78.0,60.0,0.3205,76.9231,use with care,263.0,0.4791,77.9468,use with care,-0.9888,,none,-1.0237
+Victoria,Vic,L,"Rental, Hiring and Real Estate Services",Non-employing,9779.0,5621.0,0.0,57.4803,reliable,33845.0,0.0,58.3099,reliable,-0.9888,57.4803,this state,-0.8296
+Victoria,Vic,L,"Rental, Hiring and Real Estate Services",1-4,952.0,602.0,0.0,63.2353,reliable,4094.0,0.0085,62.7748,reliable,-0.9888,63.2353,this state,0.4605
+Victoria,Vic,L,"Rental, Hiring and Real Estate Services",5+,59.0,49.0,0.3051,83.0508,use with care,240.0,0.4458,75.0,use with care,-0.9888,,none,8.0508
+Victoria,Vic,M,"Professional, Scientific and Technical Services",Non-employing,11247.0,5016.0,0.0,44.5986,reliable,37749.0,0.0,44.8754,reliable,-0.9888,44.5986,this state,-0.2768
+Victoria,Vic,M,"Professional, Scientific and Technical Services",1-4,4046.0,2615.0,0.0,64.6317,reliable,16703.0,0.0009,63.5574,reliable,-0.9888,64.6317,this state,1.0743
+Victoria,Vic,M,"Professional, Scientific and Technical Services",5+,231.0,158.0,0.026,68.3983,reliable,898.0,0.1192,73.8307,use with care,-0.9888,68.3983,this state,-5.4325
+Victoria,Vic,N,Administrative and Support Services,Non-employing,9011.0,2779.0,0.0,30.8401,reliable,21422.0,0.0,34.4226,reliable,-0.9888,30.8401,this state,-3.5825
+Victoria,Vic,N,Administrative and Support Services,1-4,1497.0,798.0,0.0,53.3066,reliable,5762.0,0.0,53.5751,reliable,-0.9888,53.3066,this state,-0.2685
+Victoria,Vic,N,Administrative and Support Services,5+,247.0,143.0,0.085,57.8947,reliable,919.0,0.1164,60.0653,use with care,-0.9888,57.8947,this state,-2.1706
+Victoria,Vic,O,Public Administration and Safety,Non-employing,491.0,151.0,0.0468,30.7536,reliable,1144.0,0.0743,30.3322,reliable,-0.9888,30.7536,this state,0.4214
+Victoria,Vic,O,Public Administration and Safety,1-4,81.0,43.0,0.0741,53.0864,use with care,384.0,0.1641,49.7396,use with care,-0.9888,,none,3.3468
+Victoria,Vic,O,Public Administration and Safety,5+,36.0,16.0,0.3333,44.4444,use with care,99.0,0.7576,36.3636,use with care,-0.9888,,none,8.0808
+Victoria,Vic,P,Education and Training,Non-employing,1983.0,798.0,0.0,40.2421,reliable,5409.0,0.0152,43.2982,reliable,-0.9888,40.2421,this state,-3.0561
+Victoria,Vic,P,Education and Training,1-4,592.0,385.0,0.0,65.0338,reliable,2053.0,0.0219,61.5197,reliable,-0.9888,65.0338,this state,3.5141
+Victoria,Vic,P,Education and Training,5+,256.0,230.0,0.1016,89.8438,use with care,512.0,0.3086,80.6641,use with care,-0.9888,,none,9.1797
+Victoria,Vic,Q,Health Care and Social Assistance,Non-employing,6110.0,3195.0,0.0,52.2913,reliable,19665.0,0.0028,54.7877,reliable,-0.9888,52.2913,this state,-2.4964
+Victoria,Vic,Q,Health Care and Social Assistance,1-4,1918.0,1289.0,0.0104,67.2054,reliable,7561.0,0.0071,66.9356,reliable,-0.9888,67.2054,this state,0.2698
+Victoria,Vic,Q,Health Care and Social Assistance,5+,287.0,207.0,0.1498,72.1254,use with care,1149.0,0.1993,70.4091,use with care,-0.9888,,none,1.7164
+Victoria,Vic,R,Arts and Recreation Services,Non-employing,1864.0,788.0,0.0038,42.2747,reliable,5464.0,0.021,44.4546,reliable,-0.9888,42.2747,this state,-2.1799
+Victoria,Vic,R,Arts and Recreation Services,1-4,423.0,266.0,0.0165,62.8842,reliable,1602.0,0.068,60.2996,reliable,-0.9888,62.8842,this state,2.5845
+Victoria,Vic,R,Arts and Recreation Services,5+,57.0,28.0,0.386,49.1228,use with care,196.0,0.4745,54.0816,use with care,-0.9888,,none,-4.9588
+Victoria,Vic,S,Other Services,Non-employing,5912.0,2075.0,0.0,35.0981,reliable,16585.0,0.0,39.6503,reliable,-0.9888,35.0981,this state,-4.5522
+Victoria,Vic,S,Other Services,1-4,2107.0,1280.0,0.0,60.7499,reliable,7994.0,0.0,61.7088,reliable,-0.9888,60.7499,this state,-0.9589
+Victoria,Vic,S,Other Services,5+,90.0,66.0,0.0333,73.3333,use with care,382.0,0.1832,70.6806,use with care,-0.9888,,none,2.6527
+Queensland,Qld,A,"Agriculture, Forestry and Fishing",Non-employing,3267.0,1978.0,0.0058,60.5448,reliable,12724.0,0.0117,58.8651,reliable,1.2782,60.5448,this state,1.6797
+Queensland,Qld,A,"Agriculture, Forestry and Fishing",1-4,535.0,391.0,0.0355,73.0841,reliable,2482.0,0.0528,70.9106,reliable,1.2782,73.0841,this state,2.1736
+Queensland,Qld,A,"Agriculture, Forestry and Fishing",5+,51.0,41.0,0.4118,80.3922,use with care,288.0,0.2951,68.0556,use with care,1.2782,,none,12.3366
+Queensland,Qld,B,Mining,Non-employing,165.0,74.0,0.1818,44.8485,use with care,838.0,0.1527,48.0907,use with care,1.2782,,none,-3.2422
+Queensland,Qld,B,Mining,1-4,83.0,49.0,0.3133,59.0361,use with care,297.0,0.3367,66.33,use with care,1.2782,,none,-7.2938
+Queensland,Qld,B,Mining,5+,12.0,3.0,1.0,,no rate,44.0,1.0,38.6364,use with care,1.2782,,none,
+Queensland,Qld,C,Manufacturing,Non-employing,1594.0,685.0,0.0107,42.9737,reliable,8325.0,0.0388,42.8348,reliable,1.2782,42.9737,this state,0.1388
+Queensland,Qld,C,Manufacturing,1-4,792.0,534.0,0.0492,67.4242,reliable,3792.0,0.1036,62.6582,use with care,1.2782,67.4242,this state,4.766
+Queensland,Qld,C,Manufacturing,5+,123.0,91.0,0.7724,73.9837,use with care,625.0,0.7584,66.56,use with care,1.2782,,none,7.4237
+Queensland,Qld,D,"Electricity, Gas, Water and Waste Services",Non-employing,170.0,70.0,0.1176,41.1765,use with care,890.0,0.1461,41.9101,use with care,1.2782,,none,-0.7336
+Queensland,Qld,D,"Electricity, Gas, Water and Waste Services",1-4,83.0,45.0,0.1807,54.2169,use with care,366.0,0.1885,51.6393,use with care,1.2782,,none,2.5775
+Queensland,Qld,D,"Electricity, Gas, Water and Waste Services",5+,11.0,7.0,1.0,,no rate,56.0,1.0,60.7143,use with care,1.2782,,none,
+Queensland,Qld,E,Construction,Non-employing,9896.0,4323.0,0.0,43.6843,reliable,58536.0,0.0003,41.5454,reliable,1.2782,43.6843,this state,2.1389
+Queensland,Qld,E,Construction,1-4,4015.0,2531.0,0.0,63.0386,reliable,20950.0,0.0015,60.5728,reliable,1.2782,63.0386,this state,2.4658
+Queensland,Qld,E,Construction,5+,194.0,134.0,0.1495,69.0722,use with care,828.0,0.2283,66.5459,use with care,1.2782,,none,2.5263
+Queensland,Qld,F,Wholesale Trade,Non-employing,1233.0,504.0,0.0,40.8759,reliable,7847.0,0.022,38.537,reliable,1.2782,40.8759,this state,2.3389
+Queensland,Qld,F,Wholesale Trade,1-4,601.0,344.0,0.0,57.2379,reliable,3476.0,0.0351,53.3947,reliable,1.2782,57.2379,this state,3.8432
+Queensland,Qld,F,Wholesale Trade,5+,61.0,41.0,1.0,67.2131,use with care,329.0,0.9271,62.31,use with care,1.2782,,none,4.9031
+Queensland,Qld,G,Retail Trade,Non-employing,3331.0,1295.0,0.0,38.8772,reliable,18586.0,0.0025,37.7865,reliable,1.2782,38.8772,this state,1.0907
+Queensland,Qld,G,Retail Trade,1-4,1577.0,898.0,0.0,56.9436,reliable,8150.0,0.012,56.3926,reliable,1.2782,56.9436,this state,0.5509
+Queensland,Qld,G,Retail Trade,5+,263.0,194.0,0.2471,73.7643,use with care,1086.0,0.2486,72.6519,use with care,1.2782,,none,1.1123
+Queensland,Qld,H,Accommodation and Food Services,Non-employing,1206.0,449.0,0.0,37.2305,reliable,7871.0,0.0022,37.2888,reliable,1.2782,37.2305,this state,-0.0583
+Queensland,Qld,H,Accommodation and Food Services,1-4,1903.0,1067.0,0.0,56.0694,reliable,9868.0,0.0026,53.8914,reliable,1.2782,56.0694,this state,2.178
+Queensland,Qld,H,Accommodation and Food Services,5+,461.0,293.0,0.0456,63.5575,reliable,2139.0,0.0584,63.8616,reliable,1.2782,63.5575,this state,-0.3041
+Queensland,Qld,I,"Transport, Postal and Warehousing",Non-employing,6135.0,2026.0,0.0024,33.0236,reliable,48577.0,0.0024,32.6183,reliable,1.2782,33.0236,this state,0.4053
+Queensland,Qld,I,"Transport, Postal and Warehousing",1-4,1226.0,687.0,0.0171,56.0359,reliable,5981.0,0.0247,54.0712,reliable,1.2782,56.0359,this state,1.9647
+Queensland,Qld,I,"Transport, Postal and Warehousing",5+,58.0,28.0,1.0,48.2759,use with care,275.0,0.6982,45.8182,use with care,1.2782,,none,2.4577
+Queensland,Qld,J,Information Media and Telecommunications,Non-employing,533.0,210.0,0.015,39.3996,reliable,3174.0,0.075,43.1632,reliable,1.2782,39.3996,this state,-3.7636
+Queensland,Qld,J,Information Media and Telecommunications,1-4,184.0,98.0,0.2772,53.2609,use with care,1051.0,0.2369,55.6613,use with care,1.2782,,none,-2.4004
+Queensland,Qld,J,Information Media and Telecommunications,5+,18.0,4.0,1.0,,no rate,153.0,0.6471,41.8301,use with care,1.2782,,none,
+Queensland,Qld,K,Financial and Insurance Services,Non-employing,2469.0,1255.0,0.0028,50.8303,reliable,16050.0,0.0037,49.1153,reliable,1.2782,50.8303,this state,1.715
+Queensland,Qld,K,Financial and Insurance Services,1-4,678.0,452.0,0.0044,66.6667,reliable,4060.0,0.0158,61.3793,reliable,1.2782,66.6667,this state,5.2874
+Queensland,Qld,K,Financial and Insurance Services,5+,41.0,36.0,0.4634,87.8049,use with care,263.0,0.4791,77.9468,use with care,1.2782,,none,9.8581
+Queensland,Qld,L,"Rental, Hiring and Real Estate Services",Non-employing,6440.0,3769.0,0.0,58.5248,reliable,33845.0,0.0,58.3099,reliable,1.2782,58.5248,this state,0.2149
+Queensland,Qld,L,"Rental, Hiring and Real Estate Services",1-4,1108.0,729.0,0.0,65.7942,reliable,4094.0,0.0085,62.7748,reliable,1.2782,65.7942,this state,3.0194
+Queensland,Qld,L,"Rental, Hiring and Real Estate Services",5+,65.0,46.0,0.3385,70.7692,use with care,240.0,0.4458,75.0,use with care,1.2782,,none,-4.2308
+Queensland,Qld,M,"Professional, Scientific and Technical Services",Non-employing,6832.0,3051.0,0.0,44.6575,reliable,37749.0,0.0,44.8754,reliable,1.2782,44.6575,this state,-0.2179
+Queensland,Qld,M,"Professional, Scientific and Technical Services",1-4,3088.0,1935.0,0.0,62.6619,reliable,16703.0,0.0009,63.5574,reliable,1.2782,62.6619,this state,-0.8955
+Queensland,Qld,M,"Professional, Scientific and Technical Services",5+,187.0,141.0,0.0963,75.4011,reliable,898.0,0.1192,73.8307,use with care,1.2782,75.4011,this state,1.5703
+Queensland,Qld,N,Administrative and Support Services,Non-employing,3473.0,1326.0,0.0,38.1802,reliable,21422.0,0.0,34.4226,reliable,1.2782,38.1802,this state,3.7577
+Queensland,Qld,N,Administrative and Support Services,1-4,1054.0,604.0,0.0,57.3055,reliable,5762.0,0.0,53.5751,reliable,1.2782,57.3055,this state,3.7304
+Queensland,Qld,N,Administrative and Support Services,5+,156.0,104.0,0.0192,66.6667,reliable,919.0,0.1164,60.0653,use with care,1.2782,66.6667,this state,6.6014
+Queensland,Qld,O,Public Administration and Safety,Non-employing,129.0,49.0,0.0775,37.9845,reliable,1144.0,0.0743,30.3322,reliable,1.2782,37.9845,this state,7.6523
+Queensland,Qld,O,Public Administration and Safety,1-4,59.0,33.0,0.1525,55.9322,use with care,384.0,0.1641,49.7396,use with care,1.2782,,none,6.1926
+Queensland,Qld,O,Public Administration and Safety,5+,19.0,4.0,1.0,,no rate,99.0,0.7576,36.3636,use with care,1.2782,,none,
+Queensland,Qld,P,Education and Training,Non-employing,931.0,399.0,0.0183,42.8571,reliable,5409.0,0.0152,43.2982,reliable,1.2782,42.8571,this state,-0.4411
+Queensland,Qld,P,Education and Training,1-4,416.0,238.0,0.0288,57.2115,reliable,2053.0,0.0219,61.5197,reliable,1.2782,57.2115,this state,-4.3082
+Queensland,Qld,P,Education and Training,5+,65.0,49.0,0.5538,75.3846,use with care,512.0,0.3086,80.6641,use with care,1.2782,,none,-5.2794
+Queensland,Qld,Q,Health Care and Social Assistance,Non-employing,4050.0,2189.0,0.003,54.0494,reliable,19665.0,0.0028,54.7877,reliable,1.2782,54.0494,this state,-0.7383
+Queensland,Qld,Q,Health Care and Social Assistance,1-4,1756.0,1178.0,0.0108,67.0843,reliable,7561.0,0.0071,66.9356,reliable,1.2782,67.0843,this state,0.1487
+Queensland,Qld,Q,Health Care and Social Assistance,5+,231.0,169.0,0.1948,73.1602,use with care,1149.0,0.1993,70.4091,use with care,1.2782,,none,2.7511
+Queensland,Qld,R,Arts and Recreation Services,Non-employing,966.0,427.0,0.0176,44.2029,reliable,5464.0,0.021,44.4546,reliable,1.2782,44.2029,this state,-0.2517
+Queensland,Qld,R,Arts and Recreation Services,1-4,354.0,209.0,0.0424,59.0395,reliable,1602.0,0.068,60.2996,reliable,1.2782,59.0395,this state,-1.2601
+Queensland,Qld,R,Arts and Recreation Services,5+,32.0,17.0,0.3438,53.125,use with care,196.0,0.4745,54.0816,use with care,1.2782,,none,-0.9566
+Queensland,Qld,S,Other Services,Non-employing,3210.0,1372.0,0.0,42.7414,reliable,16585.0,0.0,39.6503,reliable,1.2782,42.7414,this state,3.0911
+Queensland,Qld,S,Other Services,1-4,1764.0,1132.0,0.0,64.1723,reliable,7994.0,0.0,61.7088,reliable,1.2782,64.1723,this state,2.4636
+Queensland,Qld,S,Other Services,5+,87.0,60.0,0.046,68.9655,use with care,382.0,0.1832,70.6806,use with care,1.2782,,none,-1.7151
+South Australia,SA,A,"Agriculture, Forestry and Fishing",Non-employing,938.0,554.0,0.0245,59.0618,reliable,12724.0,0.0117,58.8651,reliable,4.2005,59.0618,this state,0.1967
+South Australia,SA,A,"Agriculture, Forestry and Fishing",1-4,227.0,161.0,0.0485,70.9251,reliable,2482.0,0.0528,70.9106,reliable,4.2005,70.9251,this state,0.0146
+South Australia,SA,A,"Agriculture, Forestry and Fishing",5+,36.0,27.0,0.4167,75.0,use with care,288.0,0.2951,68.0556,use with care,4.2005,,none,6.9444
+South Australia,SA,B,Mining,Non-employing,45.0,19.0,0.4889,42.2222,use with care,838.0,0.1527,48.0907,use with care,4.2005,,none,-5.8685
+South Australia,SA,B,Mining,1-4,9.0,9.0,1.0,,no rate,297.0,0.3367,66.33,use with care,4.2005,,none,
+South Australia,SA,B,Mining,5+,3.0,3.0,1.0,,no rate,44.0,1.0,38.6364,use with care,4.2005,,none,
+South Australia,SA,C,Manufacturing,Non-employing,574.0,281.0,0.0958,48.9547,reliable,8325.0,0.0388,42.8348,reliable,4.2005,48.9547,this state,6.1199
+South Australia,SA,C,Manufacturing,1-4,174.0,127.0,0.477,72.9885,use with care,3792.0,0.1036,62.6582,use with care,4.2005,,none,10.3303
+South Australia,SA,C,Manufacturing,5+,55.0,37.0,1.0,67.2727,use with care,625.0,0.7584,66.56,use with care,4.2005,,none,0.7127
+South Australia,SA,D,"Electricity, Gas, Water and Waste Services",Non-employing,58.0,29.0,0.3276,50.0,use with care,890.0,0.1461,41.9101,use with care,4.2005,,none,8.0899
+South Australia,SA,D,"Electricity, Gas, Water and Waste Services",1-4,14.0,6.0,1.0,,no rate,366.0,0.1885,51.6393,use with care,4.2005,,none,
+South Australia,SA,D,"Electricity, Gas, Water and Waste Services",5+,3.0,3.0,1.0,,no rate,56.0,1.0,60.7143,use with care,4.2005,,none,
+South Australia,SA,E,Construction,Non-employing,3215.0,1441.0,0.0,44.8212,reliable,58536.0,0.0003,41.5454,reliable,4.2005,44.8212,this state,3.2758
+South Australia,SA,E,Construction,1-4,834.0,559.0,0.024,67.0264,reliable,20950.0,0.0015,60.5728,reliable,4.2005,67.0264,this state,6.4536
+South Australia,SA,E,Construction,5+,38.0,27.0,0.4474,71.0526,use with care,828.0,0.2283,66.5459,use with care,4.2005,,none,4.5067
+South Australia,SA,F,Wholesale Trade,Non-employing,575.0,264.0,0.0,45.913,reliable,7847.0,0.022,38.537,reliable,4.2005,45.913,this state,7.376
+South Australia,SA,F,Wholesale Trade,1-4,192.0,104.0,0.1771,54.1667,use with care,3476.0,0.0351,53.3947,reliable,4.2005,57.5952,national + state adjustment,0.772
+South Australia,SA,F,Wholesale Trade,5+,18.0,3.0,1.0,,no rate,329.0,0.9271,62.31,use with care,4.2005,,none,
+South Australia,SA,G,Retail Trade,Non-employing,948.0,374.0,0.0,39.4515,reliable,18586.0,0.0025,37.7865,reliable,4.2005,39.4515,this state,1.665
+South Australia,SA,G,Retail Trade,1-4,374.0,220.0,0.0374,58.8235,reliable,8150.0,0.012,56.3926,reliable,4.2005,58.8235,this state,2.4309
+South Australia,SA,G,Retail Trade,5+,67.0,43.0,0.5821,64.1791,use with care,1086.0,0.2486,72.6519,use with care,4.2005,,none,-8.4728
+South Australia,SA,H,Accommodation and Food Services,Non-employing,436.0,193.0,0.0,44.2661,reliable,7871.0,0.0022,37.2888,reliable,4.2005,44.2661,this state,6.9773
+South Australia,SA,H,Accommodation and Food Services,1-4,613.0,321.0,0.0,52.3654,reliable,9868.0,0.0026,53.8914,reliable,4.2005,52.3654,this state,-1.526
+South Australia,SA,H,Accommodation and Food Services,5+,149.0,102.0,0.0872,68.4564,reliable,2139.0,0.0584,63.8616,reliable,4.2005,68.4564,this state,4.5948
+South Australia,SA,I,"Transport, Postal and Warehousing",Non-employing,2380.0,907.0,0.0071,38.1092,reliable,48577.0,0.0024,32.6183,reliable,4.2005,38.1092,this state,5.4909
+South Australia,SA,I,"Transport, Postal and Warehousing",1-4,227.0,131.0,0.0617,57.7093,reliable,5981.0,0.0247,54.0712,reliable,4.2005,57.7093,this state,3.638
+South Australia,SA,I,"Transport, Postal and Warehousing",5+,17.0,9.0,1.0,,no rate,275.0,0.6982,45.8182,use with care,4.2005,,none,
+South Australia,SA,J,Information Media and Telecommunications,Non-employing,149.0,72.0,0.2886,48.3221,use with care,3174.0,0.075,43.1632,reliable,4.2005,47.3637,national + state adjustment,5.1589
+South Australia,SA,J,Information Media and Telecommunications,1-4,56.0,28.0,1.0,50.0,use with care,1051.0,0.2369,55.6613,use with care,4.2005,,none,-5.6613
+South Australia,SA,J,Information Media and Telecommunications,5+,6.0,0.0,1.0,,no rate,153.0,0.6471,41.8301,use with care,4.2005,,none,
+South Australia,SA,K,Financial and Insurance Services,Non-employing,754.0,418.0,0.004,55.4377,reliable,16050.0,0.0037,49.1153,reliable,4.2005,55.4377,this state,6.3224
+South Australia,SA,K,Financial and Insurance Services,1-4,175.0,121.0,0.0,69.1429,reliable,4060.0,0.0158,61.3793,reliable,4.2005,69.1429,this state,7.7635
+South Australia,SA,K,Financial and Insurance Services,5+,17.0,13.0,1.0,,no rate,263.0,0.4791,77.9468,use with care,4.2005,,none,
+South Australia,SA,L,"Rental, Hiring and Real Estate Services",Non-employing,2031.0,1286.0,0.0,63.3186,reliable,33845.0,0.0,58.3099,reliable,4.2005,63.3186,this state,5.0086
+South Australia,SA,L,"Rental, Hiring and Real Estate Services",1-4,146.0,95.0,0.0,65.0685,reliable,4094.0,0.0085,62.7748,reliable,4.2005,65.0685,this state,2.2937
+South Australia,SA,L,"Rental, Hiring and Real Estate Services",5+,13.0,9.0,1.0,,no rate,240.0,0.4458,75.0,use with care,4.2005,,none,
+South Australia,SA,M,"Professional, Scientific and Technical Services",Non-employing,1839.0,908.0,0.0,49.3747,reliable,37749.0,0.0,44.8754,reliable,4.2005,49.3747,this state,4.4993
+South Australia,SA,M,"Professional, Scientific and Technical Services",1-4,659.0,427.0,0.0,64.7951,reliable,16703.0,0.0009,63.5574,reliable,4.2005,64.7951,this state,1.2377
+South Australia,SA,M,"Professional, Scientific and Technical Services",5+,42.0,36.0,0.2381,85.7143,use with care,898.0,0.1192,73.8307,use with care,4.2005,,none,11.8836
+South Australia,SA,N,Administrative and Support Services,Non-employing,1184.0,446.0,0.0,37.6689,reliable,21422.0,0.0,34.4226,reliable,4.2005,37.6689,this state,3.2464
+South Australia,SA,N,Administrative and Support Services,1-4,218.0,138.0,0.0,63.3028,reliable,5762.0,0.0,53.5751,reliable,4.2005,63.3028,this state,9.7276
+South Australia,SA,N,Administrative and Support Services,5+,44.0,31.0,0.4773,70.4545,use with care,919.0,0.1164,60.0653,use with care,4.2005,,none,10.3893
+South Australia,SA,O,Public Administration and Safety,Non-employing,46.0,18.0,0.1739,39.1304,use with care,1144.0,0.0743,30.3322,reliable,4.2005,34.5326,national + state adjustment,8.7983
+South Australia,SA,O,Public Administration and Safety,1-4,17.0,10.0,1.0,,no rate,384.0,0.1641,49.7396,use with care,4.2005,,none,
+South Australia,SA,O,Public Administration and Safety,5+,13.0,7.0,1.0,,no rate,99.0,0.7576,36.3636,use with care,4.2005,,none,
+South Australia,SA,P,Education and Training,Non-employing,298.0,154.0,0.057,51.6779,reliable,5409.0,0.0152,43.2982,reliable,4.2005,51.6779,this state,8.3796
+South Australia,SA,P,Education and Training,1-4,79.0,56.0,0.038,70.8861,use with care,2053.0,0.0219,61.5197,reliable,4.2005,65.7202,national + state adjustment,9.3663
+South Australia,SA,P,Education and Training,5+,16.0,8.0,1.0,,no rate,512.0,0.3086,80.6641,use with care,4.2005,,none,
+South Australia,SA,Q,Health Care and Social Assistance,Non-employing,1165.0,671.0,0.012,57.5966,reliable,19665.0,0.0028,54.7877,reliable,4.2005,57.5966,this state,2.8089
+South Australia,SA,Q,Health Care and Social Assistance,1-4,438.0,300.0,0.0068,68.4932,reliable,7561.0,0.0071,66.9356,reliable,4.2005,68.4932,this state,1.5576
+South Australia,SA,Q,Health Care and Social Assistance,5+,70.0,50.0,0.2857,71.4286,use with care,1149.0,0.1993,70.4091,use with care,4.2005,,none,1.0195
+South Australia,SA,R,Arts and Recreation Services,Non-employing,293.0,145.0,0.0137,49.4881,reliable,5464.0,0.021,44.4546,reliable,4.2005,49.4881,this state,5.0334
+South Australia,SA,R,Arts and Recreation Services,1-4,81.0,50.0,0.0741,61.7284,use with care,1602.0,0.068,60.2996,reliable,4.2005,64.5001,national + state adjustment,1.4288
+South Australia,SA,R,Arts and Recreation Services,5+,15.0,9.0,1.0,,no rate,196.0,0.4745,54.0816,use with care,4.2005,,none,
+South Australia,SA,S,Other Services,Non-employing,899.0,412.0,0.0,45.8287,reliable,16585.0,0.0,39.6503,reliable,4.2005,45.8287,this state,6.1784
+South Australia,SA,S,Other Services,1-4,364.0,227.0,0.0,62.3626,reliable,7994.0,0.0,61.7088,reliable,4.2005,62.3626,this state,0.6539
+South Australia,SA,S,Other Services,5+,37.0,22.0,1.0,59.4595,use with care,382.0,0.1832,70.6806,use with care,4.2005,,none,-11.2212
+Western Australia,WA,A,"Agriculture, Forestry and Fishing",Non-employing,1046.0,554.0,0.0153,52.9637,reliable,12724.0,0.0117,58.8651,reliable,3.6958,52.9637,this state,-5.9015
+Western Australia,WA,A,"Agriculture, Forestry and Fishing",1-4,221.0,169.0,0.095,76.4706,reliable,2482.0,0.0528,70.9106,reliable,3.6958,76.4706,this state,5.56
+Western Australia,WA,A,"Agriculture, Forestry and Fishing",5+,34.0,19.0,0.3824,55.8824,use with care,288.0,0.2951,68.0556,use with care,3.6958,,none,-12.1732
+Western Australia,WA,B,Mining,Non-employing,380.0,195.0,0.0342,51.3158,reliable,838.0,0.1527,48.0907,use with care,3.6958,51.3158,this state,3.2251
+Western Australia,WA,B,Mining,1-4,113.0,79.0,0.1593,69.9115,use with care,297.0,0.3367,66.33,use with care,3.6958,,none,3.5815
+Western Australia,WA,B,Mining,5+,17.0,8.0,1.0,,no rate,44.0,1.0,38.6364,use with care,3.6958,,none,
+Western Australia,WA,C,Manufacturing,Non-employing,884.0,391.0,0.0079,44.2308,reliable,8325.0,0.0388,42.8348,reliable,3.6958,44.2308,this state,1.3959
+Western Australia,WA,C,Manufacturing,1-4,417.0,273.0,0.211,65.4676,use with care,3792.0,0.1036,62.6582,use with care,3.6958,,none,2.8094
+Western Australia,WA,C,Manufacturing,5+,64.0,43.0,1.0,67.1875,use with care,625.0,0.7584,66.56,use with care,3.6958,,none,0.6275
+Western Australia,WA,D,"Electricity, Gas, Water and Waste Services",Non-employing,50.0,27.0,0.36,54.0,use with care,890.0,0.1461,41.9101,use with care,3.6958,,none,12.0899
+Western Australia,WA,D,"Electricity, Gas, Water and Waste Services",1-4,30.0,19.0,0.2333,63.3333,use with care,366.0,0.1885,51.6393,use with care,3.6958,,none,11.694
+Western Australia,WA,D,"Electricity, Gas, Water and Waste Services",5+,10.0,3.0,1.0,,no rate,56.0,1.0,60.7143,use with care,3.6958,,none,
+Western Australia,WA,E,Construction,Non-employing,5484.0,2458.0,0.0,44.8213,reliable,58536.0,0.0003,41.5454,reliable,3.6958,44.8213,this state,3.2759
+Western Australia,WA,E,Construction,1-4,1688.0,1068.0,0.0,63.2701,reliable,20950.0,0.0015,60.5728,reliable,3.6958,63.2701,this state,2.6973
+Western Australia,WA,E,Construction,5+,69.0,49.0,0.4783,71.0145,use with care,828.0,0.2283,66.5459,use with care,3.6958,,none,4.4686
+Western Australia,WA,F,Wholesale Trade,Non-employing,651.0,283.0,0.0,43.4716,reliable,7847.0,0.022,38.537,reliable,3.6958,43.4716,this state,4.9346
+Western Australia,WA,F,Wholesale Trade,1-4,243.0,147.0,0.0,60.4938,reliable,3476.0,0.0351,53.3947,reliable,3.6958,60.4938,this state,7.0991
+Western Australia,WA,F,Wholesale Trade,5+,34.0,23.0,1.0,67.6471,use with care,329.0,0.9271,62.31,use with care,3.6958,,none,5.337
+Western Australia,WA,G,Retail Trade,Non-employing,1357.0,563.0,0.0074,41.4886,reliable,18586.0,0.0025,37.7865,reliable,3.6958,41.4886,this state,3.7021
+Western Australia,WA,G,Retail Trade,1-4,591.0,373.0,0.0271,63.1134,reliable,8150.0,0.012,56.3926,reliable,3.6958,63.1134,this state,6.7207
+Western Australia,WA,G,Retail Trade,5+,120.0,94.0,0.3,78.3333,use with care,1086.0,0.2486,72.6519,use with care,3.6958,,none,5.6814
+Western Australia,WA,H,Accommodation and Food Services,Non-employing,587.0,245.0,0.0,41.7376,reliable,7871.0,0.0022,37.2888,reliable,3.6958,41.7376,this state,4.4489
+Western Australia,WA,H,Accommodation and Food Services,1-4,809.0,472.0,0.0,58.3436,reliable,9868.0,0.0026,53.8914,reliable,3.6958,58.3436,this state,4.4523
+Western Australia,WA,H,Accommodation and Food Services,5+,220.0,156.0,0.1273,70.9091,use with care,2139.0,0.0584,63.8616,reliable,3.6958,67.5574,national + state adjustment,7.0475
+Western Australia,WA,I,"Transport, Postal and Warehousing",Non-employing,3949.0,1558.0,0.0073,39.453,reliable,48577.0,0.0024,32.6183,reliable,3.6958,39.453,this state,6.8347
+Western Australia,WA,I,"Transport, Postal and Warehousing",1-4,452.0,271.0,0.0575,59.9558,reliable,5981.0,0.0247,54.0712,reliable,3.6958,59.9558,this state,5.8845
+Western Australia,WA,I,"Transport, Postal and Warehousing",5+,31.0,15.0,1.0,48.3871,use with care,275.0,0.6982,45.8182,use with care,3.6958,,none,2.5689
+Western Australia,WA,J,Information Media and Telecommunications,Non-employing,241.0,119.0,0.1743,49.3776,use with care,3174.0,0.075,43.1632,reliable,3.6958,46.859,national + state adjustment,6.2144
+Western Australia,WA,J,Information Media and Telecommunications,1-4,75.0,41.0,0.3867,54.6667,use with care,1051.0,0.2369,55.6613,use with care,3.6958,,none,-0.9946
+Western Australia,WA,J,Information Media and Telecommunications,5+,8.0,0.0,1.0,,no rate,153.0,0.6471,41.8301,use with care,3.6958,,none,
+Western Australia,WA,K,Financial and Insurance Services,Non-employing,1392.0,716.0,0.0057,51.4368,reliable,16050.0,0.0037,49.1153,reliable,3.6958,51.4368,this state,2.3215
+Western Australia,WA,K,Financial and Insurance Services,1-4,335.0,205.0,0.009,61.194,reliable,4060.0,0.0158,61.3793,reliable,3.6958,61.194,this state,-0.1853
+Western Australia,WA,K,Financial and Insurance Services,5+,32.0,21.0,1.0,65.625,use with care,263.0,0.4791,77.9468,use with care,3.6958,,none,-12.3218
+Western Australia,WA,L,"Rental, Hiring and Real Estate Services",Non-employing,2832.0,1746.0,0.0,61.6525,reliable,33845.0,0.0,58.3099,reliable,3.6958,61.6525,this state,3.3426
+Western Australia,WA,L,"Rental, Hiring and Real Estate Services",1-4,273.0,176.0,0.0,64.4689,reliable,4094.0,0.0085,62.7748,reliable,3.6958,64.4689,this state,1.6941
+Western Australia,WA,L,"Rental, Hiring and Real Estate Services",5+,32.0,20.0,1.0,62.5,use with care,240.0,0.4458,75.0,use with care,3.6958,,none,-12.5
+Western Australia,WA,M,"Professional, Scientific and Technical Services",Non-employing,3503.0,1589.0,0.0,45.3611,reliable,37749.0,0.0,44.8754,reliable,3.6958,45.3611,this state,0.4858
+Western Australia,WA,M,"Professional, Scientific and Technical Services",1-4,1410.0,920.0,0.0,65.2482,reliable,16703.0,0.0009,63.5574,reliable,3.6958,65.2482,this state,1.6908
+Western Australia,WA,M,"Professional, Scientific and Technical Services",5+,74.0,57.0,0.1622,77.027,use with care,898.0,0.1192,73.8307,use with care,3.6958,,none,3.1963
+Western Australia,WA,N,Administrative and Support Services,Non-employing,1626.0,638.0,0.0,39.2374,reliable,21422.0,0.0,34.4226,reliable,3.6958,39.2374,this state,4.8148
+Western Australia,WA,N,Administrative and Support Services,1-4,480.0,275.0,0.0,57.2917,reliable,5762.0,0.0,53.5751,reliable,3.6958,57.2917,this state,3.7165
+Western Australia,WA,N,Administrative and Support Services,5+,98.0,60.0,0.1837,61.2245,use with care,919.0,0.1164,60.0653,use with care,3.6958,,none,1.1592
+Western Australia,WA,O,Public Administration and Safety,Non-employing,56.0,22.0,0.0,39.2857,use with care,1144.0,0.0743,30.3322,reliable,3.6958,34.028,national + state adjustment,8.9535
+Western Australia,WA,O,Public Administration and Safety,1-4,41.0,24.0,0.1463,58.5366,use with care,384.0,0.1641,49.7396,use with care,3.6958,,none,8.797
+Western Australia,WA,O,Public Administration and Safety,5+,8.0,0.0,1.0,,no rate,99.0,0.7576,36.3636,use with care,3.6958,,none,
+Western Australia,WA,P,Education and Training,Non-employing,388.0,177.0,0.018,45.6186,reliable,5409.0,0.0152,43.2982,reliable,3.6958,45.6186,this state,2.3204
+Western Australia,WA,P,Education and Training,1-4,143.0,86.0,0.035,60.1399,reliable,2053.0,0.0219,61.5197,reliable,3.6958,60.1399,this state,-1.3799
+Western Australia,WA,P,Education and Training,5+,31.0,26.0,1.0,83.871,use with care,512.0,0.3086,80.6641,use with care,3.6958,,none,3.2069
+Western Australia,WA,Q,Health Care and Social Assistance,Non-employing,1729.0,1043.0,0.0133,60.3239,reliable,19665.0,0.0028,54.7877,reliable,3.6958,60.3239,this state,5.5362
+Western Australia,WA,Q,Health Care and Social Assistance,1-4,608.0,430.0,0.0066,70.7237,reliable,7561.0,0.0071,66.9356,reliable,3.6958,70.7237,this state,3.7881
+Western Australia,WA,Q,Health Care and Social Assistance,5+,107.0,86.0,0.1869,80.3738,use with care,1149.0,0.1993,70.4091,use with care,3.6958,,none,9.9648
+Western Australia,WA,R,Arts and Recreation Services,Non-employing,437.0,205.0,0.0549,46.9108,reliable,5464.0,0.021,44.4546,reliable,3.6958,46.9108,this state,2.4561
+Western Australia,WA,R,Arts and Recreation Services,1-4,161.0,113.0,0.0621,70.1863,reliable,1602.0,0.068,60.2996,reliable,3.6958,70.1863,this state,9.8867
+Western Australia,WA,R,Arts and Recreation Services,5+,17.0,8.0,1.0,,no rate,196.0,0.4745,54.0816,use with care,3.6958,,none,
+Western Australia,WA,S,Other Services,Non-employing,1645.0,752.0,0.0,45.7143,reliable,16585.0,0.0,39.6503,reliable,3.6958,45.7143,this state,6.064
+Western Australia,WA,S,Other Services,1-4,866.0,592.0,0.0,68.3603,reliable,7994.0,0.0,61.7088,reliable,3.6958,68.3603,this state,6.6515
+Western Australia,WA,S,Other Services,5+,54.0,40.0,0.0556,74.0741,use with care,382.0,0.1832,70.6806,use with care,3.6958,,none,3.3934
+Tasmania,Tas,A,"Agriculture, Forestry and Fishing",Non-employing,322.0,211.0,0.0652,65.528,reliable,12724.0,0.0117,58.8651,reliable,6.0051,65.528,this state,6.6628
+Tasmania,Tas,A,"Agriculture, Forestry and Fishing",1-4,83.0,64.0,0.253,77.1084,use with care,2482.0,0.0528,70.9106,reliable,6.0051,76.9156,national + state adjustment,6.1979
+Tasmania,Tas,A,"Agriculture, Forestry and Fishing",5+,13.0,6.0,1.0,,no rate,288.0,0.2951,68.0556,use with care,6.0051,,none,
+Tasmania,Tas,B,Mining,Non-employing,5.0,3.0,1.0,,no rate,838.0,0.1527,48.0907,use with care,6.0051,,none,
+Tasmania,Tas,B,Mining,1-4,6.0,3.0,1.0,,no rate,297.0,0.3367,66.33,use with care,6.0051,,none,
+Tasmania,Tas,B,Mining,5+,0.0,0.0,,,no rate,44.0,1.0,38.6364,use with care,6.0051,,none,
+Tasmania,Tas,C,Manufacturing,Non-employing,151.0,73.0,0.3245,48.3444,use with care,8325.0,0.0388,42.8348,reliable,6.0051,48.8399,national + state adjustment,5.5095
+Tasmania,Tas,C,Manufacturing,1-4,70.0,45.0,1.0,64.2857,use with care,3792.0,0.1036,62.6582,use with care,6.0051,,none,1.6275
+Tasmania,Tas,C,Manufacturing,5+,15.0,8.0,1.0,,no rate,625.0,0.7584,66.56,use with care,6.0051,,none,
+Tasmania,Tas,D,"Electricity, Gas, Water and Waste Services",Non-employing,9.0,3.0,1.0,,no rate,890.0,0.1461,41.9101,use with care,6.0051,,none,
+Tasmania,Tas,D,"Electricity, Gas, Water and Waste Services",1-4,8.0,5.0,1.0,,no rate,366.0,0.1885,51.6393,use with care,6.0051,,none,
+Tasmania,Tas,D,"Electricity, Gas, Water and Waste Services",5+,0.0,0.0,,,no rate,56.0,1.0,60.7143,use with care,6.0051,,none,
+Tasmania,Tas,E,Construction,Non-employing,857.0,418.0,0.007,48.7748,reliable,58536.0,0.0003,41.5454,reliable,6.0051,48.7748,this state,7.2294
+Tasmania,Tas,E,Construction,1-4,350.0,245.0,0.0,70.0,reliable,20950.0,0.0015,60.5728,reliable,6.0051,70.0,this state,9.4272
+Tasmania,Tas,E,Construction,5+,16.0,9.0,1.0,,no rate,828.0,0.2283,66.5459,use with care,6.0051,,none,
+Tasmania,Tas,F,Wholesale Trade,Non-employing,82.0,33.0,1.0,40.2439,use with care,7847.0,0.022,38.537,reliable,6.0051,44.5421,national + state adjustment,1.7069
+Tasmania,Tas,F,Wholesale Trade,1-4,39.0,18.0,1.0,46.1538,use with care,3476.0,0.0351,53.3947,reliable,6.0051,59.3998,national + state adjustment,-7.2409
+Tasmania,Tas,F,Wholesale Trade,5+,0.0,0.0,,,no rate,329.0,0.9271,62.31,use with care,6.0051,,none,
+Tasmania,Tas,G,Retail Trade,Non-employing,201.0,86.0,0.0896,42.7861,reliable,18586.0,0.0025,37.7865,reliable,6.0051,42.7861,this state,4.9996
+Tasmania,Tas,G,Retail Trade,1-4,157.0,90.0,0.1083,57.3248,use with care,8150.0,0.012,56.3926,reliable,6.0051,62.3977,national + state adjustment,0.9322
+Tasmania,Tas,G,Retail Trade,5+,17.0,14.0,1.0,,no rate,1086.0,0.2486,72.6519,use with care,6.0051,,none,
+Tasmania,Tas,H,Accommodation and Food Services,Non-employing,129.0,57.0,0.0,44.186,reliable,7871.0,0.0022,37.2888,reliable,6.0051,44.186,this state,6.8973
+Tasmania,Tas,H,Accommodation and Food Services,1-4,208.0,116.0,0.0721,55.7692,reliable,9868.0,0.0026,53.8914,reliable,6.0051,55.7692,this state,1.8779
+Tasmania,Tas,H,Accommodation and Food Services,5+,55.0,40.0,0.0909,72.7273,use with care,2139.0,0.0584,63.8616,reliable,6.0051,69.8667,national + state adjustment,8.8657
+Tasmania,Tas,I,"Transport, Postal and Warehousing",Non-employing,616.0,256.0,0.026,41.5584,reliable,48577.0,0.0024,32.6183,reliable,6.0051,41.5584,this state,8.9401
+Tasmania,Tas,I,"Transport, Postal and Warehousing",1-4,93.0,54.0,0.1398,58.0645,use with care,5981.0,0.0247,54.0712,reliable,6.0051,60.0763,national + state adjustment,3.9933
+Tasmania,Tas,I,"Transport, Postal and Warehousing",5+,6.0,0.0,1.0,,no rate,275.0,0.6982,45.8182,use with care,6.0051,,none,
+Tasmania,Tas,J,Information Media and Telecommunications,Non-employing,36.0,22.0,1.0,61.1111,use with care,3174.0,0.075,43.1632,reliable,6.0051,49.1683,national + state adjustment,17.9479
+Tasmania,Tas,J,Information Media and Telecommunications,1-4,9.0,0.0,1.0,,no rate,1051.0,0.2369,55.6613,use with care,6.0051,,none,
+Tasmania,Tas,J,Information Media and Telecommunications,5+,0.0,0.0,,,no rate,153.0,0.6471,41.8301,use with care,6.0051,,none,
+Tasmania,Tas,K,Financial and Insurance Services,Non-employing,120.0,63.0,0.0,52.5,reliable,16050.0,0.0037,49.1153,reliable,6.0051,52.5,this state,3.3847
+Tasmania,Tas,K,Financial and Insurance Services,1-4,36.0,26.0,0.3056,72.2222,use with care,4060.0,0.0158,61.3793,reliable,6.0051,67.3844,national + state adjustment,10.8429
+Tasmania,Tas,K,Financial and Insurance Services,5+,3.0,0.0,1.0,,no rate,263.0,0.4791,77.9468,use with care,6.0051,,none,
+Tasmania,Tas,L,"Rental, Hiring and Real Estate Services",Non-employing,447.0,271.0,0.0,60.6264,reliable,33845.0,0.0,58.3099,reliable,6.0051,60.6264,this state,2.3165
+Tasmania,Tas,L,"Rental, Hiring and Real Estate Services",1-4,50.0,34.0,0.38,68.0,use with care,4094.0,0.0085,62.7748,reliable,6.0051,68.7799,national + state adjustment,5.2252
+Tasmania,Tas,L,"Rental, Hiring and Real Estate Services",5+,4.0,3.0,1.0,,no rate,240.0,0.4458,75.0,use with care,6.0051,,none,
+Tasmania,Tas,M,"Professional, Scientific and Technical Services",Non-employing,404.0,186.0,0.0,46.0396,reliable,37749.0,0.0,44.8754,reliable,6.0051,46.0396,this state,1.1642
+Tasmania,Tas,M,"Professional, Scientific and Technical Services",1-4,175.0,104.0,0.0,59.4286,reliable,16703.0,0.0009,63.5574,reliable,6.0051,59.4286,this state,-4.1289
+Tasmania,Tas,M,"Professional, Scientific and Technical Services",5+,21.0,19.0,1.0,90.4762,use with care,898.0,0.1192,73.8307,use with care,6.0051,,none,16.6455
+Tasmania,Tas,N,Administrative and Support Services,Non-employing,251.0,111.0,0.0,44.2231,reliable,21422.0,0.0,34.4226,reliable,6.0051,44.2231,this state,9.8006
+Tasmania,Tas,N,Administrative and Support Services,1-4,102.0,58.0,0.0,56.8627,reliable,5762.0,0.0,53.5751,reliable,6.0051,56.8627,this state,3.2876
+Tasmania,Tas,N,Administrative and Support Services,5+,14.0,5.0,1.0,,no rate,919.0,0.1164,60.0653,use with care,6.0051,,none,
+Tasmania,Tas,O,Public Administration and Safety,Non-employing,11.0,4.0,1.0,,no rate,1144.0,0.0743,30.3322,reliable,6.0051,36.3372,national + state adjustment,
+Tasmania,Tas,O,Public Administration and Safety,1-4,3.0,0.0,1.0,,no rate,384.0,0.1641,49.7396,use with care,6.0051,,none,
+Tasmania,Tas,O,Public Administration and Safety,5+,0.0,0.0,,,no rate,99.0,0.7576,36.3636,use with care,6.0051,,none,
+Tasmania,Tas,P,Education and Training,Non-employing,58.0,28.0,0.2414,48.2759,use with care,5409.0,0.0152,43.2982,reliable,6.0051,49.3033,national + state adjustment,4.9777
+Tasmania,Tas,P,Education and Training,1-4,35.0,26.0,0.1429,74.2857,use with care,2053.0,0.0219,61.5197,reliable,6.0051,67.5248,national + state adjustment,12.766
+Tasmania,Tas,P,Education and Training,5+,9.0,6.0,1.0,,no rate,512.0,0.3086,80.6641,use with care,6.0051,,none,
+Tasmania,Tas,Q,Health Care and Social Assistance,Non-employing,260.0,160.0,0.0115,61.5385,reliable,19665.0,0.0028,54.7877,reliable,6.0051,61.5385,this state,6.7508
+Tasmania,Tas,Q,Health Care and Social Assistance,1-4,100.0,75.0,0.0,75.0,reliable,7561.0,0.0071,66.9356,reliable,6.0051,75.0,this state,8.0644
+Tasmania,Tas,Q,Health Care and Social Assistance,5+,19.0,12.0,1.0,,no rate,1149.0,0.1993,70.4091,use with care,6.0051,,none,
+Tasmania,Tas,R,Arts and Recreation Services,Non-employing,83.0,48.0,0.0482,57.8313,use with care,5464.0,0.021,44.4546,reliable,6.0051,50.4597,national + state adjustment,13.3767
+Tasmania,Tas,R,Arts and Recreation Services,1-4,25.0,17.0,1.0,68.0,use with care,1602.0,0.068,60.2996,reliable,6.0051,66.3047,national + state adjustment,7.7004
+Tasmania,Tas,R,Arts and Recreation Services,5+,5.0,5.0,1.0,,no rate,196.0,0.4745,54.0816,use with care,6.0051,,none,
+Tasmania,Tas,S,Other Services,Non-employing,199.0,93.0,0.0,46.7337,reliable,16585.0,0.0,39.6503,reliable,6.0051,46.7337,this state,7.0834
+Tasmania,Tas,S,Other Services,1-4,136.0,84.0,0.0,61.7647,reliable,7994.0,0.0,61.7088,reliable,6.0051,61.7647,this state,0.0559
+Tasmania,Tas,S,Other Services,5+,9.0,6.0,1.0,,no rate,382.0,0.1832,70.6806,use with care,6.0051,,none,
+Northern Territory,NT,A,"Agriculture, Forestry and Fishing",Non-employing,80.0,30.0,0.375,37.5,use with care,12724.0,0.0117,58.8651,reliable,0.6485,59.5136,national + state adjustment,-21.3651
+Northern Territory,NT,A,"Agriculture, Forestry and Fishing",1-4,33.0,23.0,0.2121,69.697,use with care,2482.0,0.0528,70.9106,reliable,0.6485,71.5591,national + state adjustment,-1.2136
+Northern Territory,NT,A,"Agriculture, Forestry and Fishing",5+,6.0,3.0,1.0,,no rate,288.0,0.2951,68.0556,use with care,0.6485,,none,
+Northern Territory,NT,B,Mining,Non-employing,3.0,3.0,1.0,,no rate,838.0,0.1527,48.0907,use with care,0.6485,,none,
+Northern Territory,NT,B,Mining,1-4,0.0,0.0,,,no rate,297.0,0.3367,66.33,use with care,0.6485,,none,
+Northern Territory,NT,B,Mining,5+,0.0,0.0,,,no rate,44.0,1.0,38.6364,use with care,0.6485,,none,
+Northern Territory,NT,C,Manufacturing,Non-employing,60.0,23.0,1.0,38.3333,use with care,8325.0,0.0388,42.8348,reliable,0.6485,43.4833,national + state adjustment,-4.5015
+Northern Territory,NT,C,Manufacturing,1-4,17.0,6.0,1.0,,no rate,3792.0,0.1036,62.6582,use with care,0.6485,,none,
+Northern Territory,NT,C,Manufacturing,5+,3.0,0.0,1.0,,no rate,625.0,0.7584,66.56,use with care,0.6485,,none,
+Northern Territory,NT,D,"Electricity, Gas, Water and Waste Services",Non-employing,11.0,4.0,1.0,,no rate,890.0,0.1461,41.9101,use with care,0.6485,,none,
+Northern Territory,NT,D,"Electricity, Gas, Water and Waste Services",1-4,0.0,0.0,,,no rate,366.0,0.1885,51.6393,use with care,0.6485,,none,
+Northern Territory,NT,D,"Electricity, Gas, Water and Waste Services",5+,0.0,0.0,,,no rate,56.0,1.0,60.7143,use with care,0.6485,,none,
+Northern Territory,NT,E,Construction,Non-employing,323.0,134.0,0.0279,41.4861,reliable,58536.0,0.0003,41.5454,reliable,0.6485,41.4861,this state,-0.0593
+Northern Territory,NT,E,Construction,1-4,136.0,90.0,0.0368,66.1765,reliable,20950.0,0.0015,60.5728,reliable,0.6485,66.1765,this state,5.6037
+Northern Territory,NT,E,Construction,5+,7.0,3.0,1.0,,no rate,828.0,0.2283,66.5459,use with care,0.6485,,none,
+Northern Territory,NT,F,Wholesale Trade,Non-employing,29.0,10.0,1.0,34.4828,use with care,7847.0,0.022,38.537,reliable,0.6485,39.1855,national + state adjustment,-4.0543
+Northern Territory,NT,F,Wholesale Trade,1-4,14.0,6.0,1.0,,no rate,3476.0,0.0351,53.3947,reliable,0.6485,54.0432,national + state adjustment,
+Northern Territory,NT,F,Wholesale Trade,5+,6.0,0.0,1.0,,no rate,329.0,0.9271,62.31,use with care,0.6485,,none,
+Northern Territory,NT,G,Retail Trade,Non-employing,83.0,30.0,0.0964,36.1446,use with care,18586.0,0.0025,37.7865,reliable,0.6485,38.435,national + state adjustment,-1.6419
+Northern Territory,NT,G,Retail Trade,1-4,52.0,30.0,0.5192,57.6923,use with care,8150.0,0.012,56.3926,reliable,0.6485,57.0411,national + state adjustment,1.2997
+Northern Territory,NT,G,Retail Trade,5+,7.0,4.0,1.0,,no rate,1086.0,0.2486,72.6519,use with care,0.6485,,none,
+Northern Territory,NT,H,Accommodation and Food Services,Non-employing,60.0,20.0,0.1667,33.3333,use with care,7871.0,0.0022,37.2888,reliable,0.6485,37.9373,national + state adjustment,-3.9554
+Northern Territory,NT,H,Accommodation and Food Services,1-4,90.0,36.0,0.0889,40.0,use with care,9868.0,0.0026,53.8914,reliable,0.6485,54.5399,national + state adjustment,-13.8914
+Northern Territory,NT,H,Accommodation and Food Services,5+,17.0,8.0,1.0,,no rate,2139.0,0.0584,63.8616,reliable,0.6485,64.5101,national + state adjustment,
+Northern Territory,NT,I,"Transport, Postal and Warehousing",Non-employing,311.0,98.0,0.0257,31.5113,reliable,48577.0,0.0024,32.6183,reliable,0.6485,31.5113,this state,-1.1071
+Northern Territory,NT,I,"Transport, Postal and Warehousing",1-4,30.0,13.0,1.0,43.3333,use with care,5981.0,0.0247,54.0712,reliable,0.6485,54.7197,national + state adjustment,-10.7379
+Northern Territory,NT,I,"Transport, Postal and Warehousing",5+,9.0,0.0,1.0,,no rate,275.0,0.6982,45.8182,use with care,0.6485,,none,
+Northern Territory,NT,J,Information Media and Telecommunications,Non-employing,24.0,6.0,1.0,25.0,use with care,3174.0,0.075,43.1632,reliable,0.6485,43.8117,national + state adjustment,-18.1632
+Northern Territory,NT,J,Information Media and Telecommunications,1-4,10.0,3.0,1.0,,no rate,1051.0,0.2369,55.6613,use with care,0.6485,,none,
+Northern Territory,NT,J,Information Media and Telecommunications,5+,3.0,0.0,1.0,,no rate,153.0,0.6471,41.8301,use with care,0.6485,,none,
+Northern Territory,NT,K,Financial and Insurance Services,Non-employing,44.0,27.0,0.2955,61.3636,use with care,16050.0,0.0037,49.1153,reliable,0.6485,49.7638,national + state adjustment,12.2484
+Northern Territory,NT,K,Financial and Insurance Services,1-4,16.0,10.0,1.0,,no rate,4060.0,0.0158,61.3793,reliable,0.6485,62.0278,national + state adjustment,
+Northern Territory,NT,K,Financial and Insurance Services,5+,3.0,3.0,1.0,,no rate,263.0,0.4791,77.9468,use with care,0.6485,,none,
+Northern Territory,NT,L,"Rental, Hiring and Real Estate Services",Non-employing,158.0,94.0,0.0,59.4937,reliable,33845.0,0.0,58.3099,reliable,0.6485,59.4937,this state,1.1837
+Northern Territory,NT,L,"Rental, Hiring and Real Estate Services",1-4,36.0,25.0,0.3056,69.4444,use with care,4094.0,0.0085,62.7748,reliable,0.6485,63.4233,national + state adjustment,6.6697
+Northern Territory,NT,L,"Rental, Hiring and Real Estate Services",5+,0.0,0.0,,,no rate,240.0,0.4458,75.0,use with care,0.6485,,none,
+Northern Territory,NT,M,"Professional, Scientific and Technical Services",Non-employing,200.0,86.0,0.0,43.0,reliable,37749.0,0.0,44.8754,reliable,0.6485,43.0,this state,-1.8754
+Northern Territory,NT,M,"Professional, Scientific and Technical Services",1-4,106.0,73.0,0.1415,68.8679,use with care,16703.0,0.0009,63.5574,reliable,0.6485,64.206,national + state adjustment,5.3105
+Northern Territory,NT,M,"Professional, Scientific and Technical Services",5+,7.0,7.0,1.0,,no rate,898.0,0.1192,73.8307,use with care,0.6485,,none,
+Northern Territory,NT,N,Administrative and Support Services,Non-employing,148.0,46.0,0.0,31.0811,reliable,21422.0,0.0,34.4226,reliable,0.6485,31.0811,this state,-3.3415
+Northern Territory,NT,N,Administrative and Support Services,1-4,59.0,38.0,0.0,64.4068,use with care,5762.0,0.0,53.5751,reliable,0.6485,54.2237,national + state adjustment,10.8316
+Northern Territory,NT,N,Administrative and Support Services,5+,6.0,3.0,1.0,,no rate,919.0,0.1164,60.0653,use with care,0.6485,,none,
+Northern Territory,NT,O,Public Administration and Safety,Non-employing,8.0,3.0,1.0,,no rate,1144.0,0.0743,30.3322,reliable,0.6485,30.9807,national + state adjustment,
+Northern Territory,NT,O,Public Administration and Safety,1-4,4.0,0.0,1.0,,no rate,384.0,0.1641,49.7396,use with care,0.6485,,none,
+Northern Territory,NT,O,Public Administration and Safety,5+,3.0,0.0,1.0,,no rate,99.0,0.7576,36.3636,use with care,0.6485,,none,
+Northern Territory,NT,P,Education and Training,Non-employing,38.0,17.0,0.2632,44.7368,use with care,5409.0,0.0152,43.2982,reliable,0.6485,43.9467,national + state adjustment,1.4386
+Northern Territory,NT,P,Education and Training,1-4,8.0,7.0,1.0,,no rate,2053.0,0.0219,61.5197,reliable,0.6485,62.1682,national + state adjustment,
+Northern Territory,NT,P,Education and Training,5+,6.0,3.0,1.0,,no rate,512.0,0.3086,80.6641,use with care,0.6485,,none,
+Northern Territory,NT,Q,Health Care and Social Assistance,Non-employing,161.0,81.0,0.0186,50.3106,reliable,19665.0,0.0028,54.7877,reliable,0.6485,50.3106,this state,-4.4771
+Northern Territory,NT,Q,Health Care and Social Assistance,1-4,60.0,39.0,0.0,65.0,use with care,7561.0,0.0071,66.9356,reliable,0.6485,67.5841,national + state adjustment,-1.9356
+Northern Territory,NT,Q,Health Care and Social Assistance,5+,17.0,14.0,1.0,,no rate,1149.0,0.1993,70.4091,use with care,0.6485,,none,
+Northern Territory,NT,R,Arts and Recreation Services,Non-employing,44.0,20.0,0.2273,45.4545,use with care,5464.0,0.021,44.4546,reliable,0.6485,45.1031,national + state adjustment,0.9999
+Northern Territory,NT,R,Arts and Recreation Services,1-4,8.0,6.0,1.0,,no rate,1602.0,0.068,60.2996,reliable,0.6485,60.9481,national + state adjustment,
+Northern Territory,NT,R,Arts and Recreation Services,5+,0.0,0.0,,,no rate,196.0,0.4745,54.0816,use with care,0.6485,,none,
+Northern Territory,NT,S,Other Services,Non-employing,108.0,59.0,0.0,54.6296,reliable,16585.0,0.0,39.6503,reliable,0.6485,54.6296,this state,14.9793
+Northern Territory,NT,S,Other Services,1-4,71.0,42.0,0.0,59.1549,use with care,7994.0,0.0,61.7088,reliable,0.6485,62.3573,national + state adjustment,-2.5539
+Northern Territory,NT,S,Other Services,5+,8.0,4.0,1.0,,no rate,382.0,0.1832,70.6806,use with care,0.6485,,none,
+Australian Capital Territory,ACT,A,"Agriculture, Forestry and Fishing",Non-employing,49.0,22.0,0.3469,44.898,use with care,12724.0,0.0117,58.8651,reliable,0.7584,59.6236,national + state adjustment,-13.9672
+Australian Capital Territory,ACT,A,"Agriculture, Forestry and Fishing",1-4,3.0,3.0,1.0,,no rate,2482.0,0.0528,70.9106,reliable,0.7584,71.669,national + state adjustment,
+Australian Capital Territory,ACT,A,"Agriculture, Forestry and Fishing",5+,0.0,0.0,,,no rate,288.0,0.2951,68.0556,use with care,0.7584,,none,
+Australian Capital Territory,ACT,B,Mining,Non-employing,6.0,0.0,1.0,,no rate,838.0,0.1527,48.0907,use with care,0.7584,,none,
+Australian Capital Territory,ACT,B,Mining,1-4,3.0,0.0,1.0,,no rate,297.0,0.3367,66.33,use with care,0.7584,,none,
+Australian Capital Territory,ACT,B,Mining,5+,0.0,0.0,,,no rate,44.0,1.0,38.6364,use with care,0.7584,,none,
+Australian Capital Territory,ACT,C,Manufacturing,Non-employing,92.0,36.0,1.0,39.1304,use with care,8325.0,0.0388,42.8348,reliable,0.7584,43.5933,national + state adjustment,-3.7044
+Australian Capital Territory,ACT,C,Manufacturing,1-4,46.0,27.0,1.0,58.6957,use with care,3792.0,0.1036,62.6582,use with care,0.7584,,none,-3.9626
+Australian Capital Territory,ACT,C,Manufacturing,5+,9.0,3.0,1.0,,no rate,625.0,0.7584,66.56,use with care,0.7584,,none,
+Australian Capital Territory,ACT,D,"Electricity, Gas, Water and Waste Services",Non-employing,21.0,5.0,1.0,23.8095,use with care,890.0,0.1461,41.9101,use with care,0.7584,,none,-18.1006
+Australian Capital Territory,ACT,D,"Electricity, Gas, Water and Waste Services",1-4,3.0,0.0,1.0,,no rate,366.0,0.1885,51.6393,use with care,0.7584,,none,
+Australian Capital Territory,ACT,D,"Electricity, Gas, Water and Waste Services",5+,0.0,0.0,,,no rate,56.0,1.0,60.7143,use with care,0.7584,,none,
+Australian Capital Territory,ACT,E,Construction,Non-employing,885.0,344.0,0.0056,38.8701,reliable,58536.0,0.0003,41.5454,reliable,0.7584,38.8701,this state,-2.6753
+Australian Capital Territory,ACT,E,Construction,1-4,446.0,257.0,0.0135,57.6233,reliable,20950.0,0.0015,60.5728,reliable,0.7584,57.6233,this state,-2.9495
+Australian Capital Territory,ACT,E,Construction,5+,15.0,12.0,1.0,,no rate,828.0,0.2283,66.5459,use with care,0.7584,,none,
+Australian Capital Territory,ACT,F,Wholesale Trade,Non-employing,62.0,18.0,1.0,29.0323,use with care,7847.0,0.022,38.537,reliable,0.7584,39.2955,national + state adjustment,-9.5048
+Australian Capital Territory,ACT,F,Wholesale Trade,1-4,35.0,14.0,1.0,40.0,use with care,3476.0,0.0351,53.3947,reliable,0.7584,54.1531,national + state adjustment,-13.3947
+Australian Capital Territory,ACT,F,Wholesale Trade,5+,6.0,0.0,1.0,,no rate,329.0,0.9271,62.31,use with care,0.7584,,none,
+Australian Capital Territory,ACT,G,Retail Trade,Non-employing,195.0,85.0,0.0513,43.5897,reliable,18586.0,0.0025,37.7865,reliable,0.7584,43.5897,this state,5.8032
+Australian Capital Territory,ACT,G,Retail Trade,1-4,121.0,65.0,0.1983,53.719,use with care,8150.0,0.012,56.3926,reliable,0.7584,57.1511,national + state adjustment,-2.6736
+Australian Capital Territory,ACT,G,Retail Trade,5+,11.0,8.0,1.0,,no rate,1086.0,0.2486,72.6519,use with care,0.7584,,none,
+Australian Capital Territory,ACT,H,Accommodation and Food Services,Non-employing,94.0,44.0,0.0745,46.8085,use with care,7871.0,0.0022,37.2888,reliable,0.7584,38.0472,national + state adjustment,9.5197
+Australian Capital Territory,ACT,H,Accommodation and Food Services,1-4,207.0,104.0,0.0145,50.2415,reliable,9868.0,0.0026,53.8914,reliable,0.7584,50.2415,this state,-3.6498
+Australian Capital Territory,ACT,H,Accommodation and Food Services,5+,40.0,16.0,0.15,40.0,use with care,2139.0,0.0584,63.8616,reliable,0.7584,64.6201,national + state adjustment,-23.8616
+Australian Capital Territory,ACT,I,"Transport, Postal and Warehousing",Non-employing,648.0,275.0,0.0046,42.4383,reliable,48577.0,0.0024,32.6183,reliable,0.7584,42.4383,this state,9.82
+Australian Capital Territory,ACT,I,"Transport, Postal and Warehousing",1-4,76.0,41.0,0.0921,53.9474,use with care,5981.0,0.0247,54.0712,reliable,0.7584,54.8297,national + state adjustment,-0.1239
+Australian Capital Territory,ACT,I,"Transport, Postal and Warehousing",5+,3.0,0.0,1.0,,no rate,275.0,0.6982,45.8182,use with care,0.7584,,none,
+Australian Capital Territory,ACT,J,Information Media and Telecommunications,Non-employing,45.0,17.0,1.0,37.7778,use with care,3174.0,0.075,43.1632,reliable,0.7584,43.9216,national + state adjustment,-5.3854
+Australian Capital Territory,ACT,J,Information Media and Telecommunications,1-4,25.0,7.0,1.0,28.0,use with care,1051.0,0.2369,55.6613,use with care,0.7584,,none,-27.6613
+Australian Capital Territory,ACT,J,Information Media and Telecommunications,5+,0.0,0.0,,,no rate,153.0,0.6471,41.8301,use with care,0.7584,,none,
+Australian Capital Territory,ACT,K,Financial and Insurance Services,Non-employing,156.0,59.0,0.0,37.8205,reliable,16050.0,0.0037,49.1153,reliable,0.7584,37.8205,this state,-11.2948
+Australian Capital Territory,ACT,K,Financial and Insurance Services,1-4,58.0,33.0,0.3276,56.8966,use with care,4060.0,0.0158,61.3793,reliable,0.7584,62.1378,national + state adjustment,-4.4828
+Australian Capital Territory,ACT,K,Financial and Insurance Services,5+,4.0,4.0,1.0,,no rate,263.0,0.4791,77.9468,use with care,0.7584,,none,
+Australian Capital Territory,ACT,L,"Rental, Hiring and Real Estate Services",Non-employing,490.0,263.0,0.0,53.6735,reliable,33845.0,0.0,58.3099,reliable,0.7584,53.6735,this state,-4.6365
+Australian Capital Territory,ACT,L,"Rental, Hiring and Real Estate Services",1-4,50.0,30.0,0.1,60.0,use with care,4094.0,0.0085,62.7748,reliable,0.7584,63.5332,national + state adjustment,-2.7748
+Australian Capital Territory,ACT,L,"Rental, Hiring and Real Estate Services",5+,3.0,3.0,1.0,,no rate,240.0,0.4458,75.0,use with care,0.7584,,none,
+Australian Capital Territory,ACT,M,"Professional, Scientific and Technical Services",Non-employing,683.0,315.0,0.0,46.1201,reliable,37749.0,0.0,44.8754,reliable,0.7584,46.1201,this state,1.2447
+Australian Capital Territory,ACT,M,"Professional, Scientific and Technical Services",1-4,598.0,397.0,0.0,66.388,reliable,16703.0,0.0009,63.5574,reliable,0.7584,66.388,this state,2.8305
+Australian Capital Territory,ACT,M,"Professional, Scientific and Technical Services",5+,22.0,12.0,1.0,54.5455,use with care,898.0,0.1192,73.8307,use with care,0.7584,,none,-19.2853
+Australian Capital Territory,ACT,N,Administrative and Support Services,Non-employing,224.0,87.0,0.0,38.8393,reliable,21422.0,0.0,34.4226,reliable,0.7584,38.8393,this state,4.4167
+Australian Capital Territory,ACT,N,Administrative and Support Services,1-4,160.0,86.0,0.0,53.75,reliable,5762.0,0.0,53.5751,reliable,0.7584,53.75,this state,0.1749
+Australian Capital Territory,ACT,N,Administrative and Support Services,5+,16.0,9.0,1.0,,no rate,919.0,0.1164,60.0653,use with care,0.7584,,none,
+Australian Capital Territory,ACT,O,Public Administration and Safety,Non-employing,20.0,4.0,1.0,,no rate,1144.0,0.0743,30.3322,reliable,0.7584,31.0906,national + state adjustment,
+Australian Capital Territory,ACT,O,Public Administration and Safety,1-4,8.0,5.0,1.0,,no rate,384.0,0.1641,49.7396,use with care,0.7584,,none,
+Australian Capital Territory,ACT,O,Public Administration and Safety,5+,0.0,0.0,,,no rate,99.0,0.7576,36.3636,use with care,0.7584,,none,
+Australian Capital Territory,ACT,P,Education and Training,Non-employing,73.0,36.0,0.2329,49.3151,use with care,5409.0,0.0152,43.2982,reliable,0.7584,44.0566,national + state adjustment,6.0169
+Australian Capital Territory,ACT,P,Education and Training,1-4,35.0,23.0,0.3429,65.7143,use with care,2053.0,0.0219,61.5197,reliable,0.7584,62.2782,national + state adjustment,4.1946
+Australian Capital Territory,ACT,P,Education and Training,5+,6.0,3.0,1.0,,no rate,512.0,0.3086,80.6641,use with care,0.7584,,none,
+Australian Capital Territory,ACT,Q,Health Care and Social Assistance,Non-employing,255.0,161.0,0.0,63.1373,reliable,19665.0,0.0028,54.7877,reliable,0.7584,63.1373,this state,8.3496
+Australian Capital Territory,ACT,Q,Health Care and Social Assistance,1-4,137.0,97.0,0.0219,70.8029,reliable,7561.0,0.0071,66.9356,reliable,0.7584,70.8029,this state,3.8673
+Australian Capital Territory,ACT,Q,Health Care and Social Assistance,5+,26.0,16.0,1.0,61.5385,use with care,1149.0,0.1993,70.4091,use with care,0.7584,,none,-8.8706
+Australian Capital Territory,ACT,R,Arts and Recreation Services,Non-employing,71.0,31.0,0.2254,43.662,use with care,5464.0,0.021,44.4546,reliable,0.7584,45.2131,national + state adjustment,-0.7926
+Australian Capital Territory,ACT,R,Arts and Recreation Services,1-4,16.0,11.0,1.0,,no rate,1602.0,0.068,60.2996,reliable,0.7584,61.0581,national + state adjustment,
+Australian Capital Territory,ACT,R,Arts and Recreation Services,5+,3.0,0.0,1.0,,no rate,196.0,0.4745,54.0816,use with care,0.7584,,none,
+Australian Capital Territory,ACT,S,Other Services,Non-employing,188.0,78.0,0.0,41.4894,reliable,16585.0,0.0,39.6503,reliable,0.7584,41.4894,this state,1.8391
+Australian Capital Territory,ACT,S,Other Services,1-4,136.0,72.0,0.0,52.9412,reliable,7994.0,0.0,61.7088,reliable,0.7584,52.9412,this state,-8.7676
+Australian Capital Territory,ACT,S,Other Services,5+,6.0,4.0,1.0,,no rate,382.0,0.1832,70.6806,use with care,0.7584,,none,

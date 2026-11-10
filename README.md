@@ -1,6 +1,6 @@
 # New-business survival in Australia: which industries and regions new businesses last in
 
-**Status: work in progress (Parts 1-2 of 5 done: source profile, industries).**
+**Status: work in progress (Parts 1-3 of 5 done: source profile, industries, regions).**
 
 About half of the businesses that start trading in Australia in a given year are no longer trading three
 Junes later. That rate is
@@ -100,14 +100,51 @@ happened by the first June. Retail Trade's fall is the largest of any industry a
 The method was checked: the three size bands rebuild the published national rate to within 0.05 points, two
 bands instead of three give an identical ranking, and no rate is shown on a base of 20 or fewer.
 
+## Part 3: where new businesses last, and where business numbers are growing (`results/REGIONS.md`)
+
+States across the four entry cohorts (data cube 1), states after allowing for their industry × size mix (data
+cube 5, 2021-22 entrants) and growth in business numbers by local government area (LGA) from June 2023 to June 2025
+(data cube 10). Survival isn't published below state level, so LGAs are compared on growth, and only the 303 LGAs
+with 1,000 or more businesses are ranked.
+
+- **Tasmania keeps its new businesses longest, in every cohort.** 54.7% of its 2022-23 entrants were still trading
+  three Junes on, against 49.2% nationally; New South Wales was lowest at 48.0%.
+- **Allowing for mix changes the picture.** A state's expected rate applies the national survival rate of each
+  industry × size cell to the state's own entrants. New South Wales would be expected to keep 49.0% of its 2021-22
+  entrants; it kept 47.6%, 1.4 points fewer, the weakest of the 8 states on that basis. Tasmania kept 6.0 points
+  more than its mix predicts, then South Australia (+4.2 points) and Western Australia (+3.7 points).
+- **Victoria's weak 2021-22 cohort is mostly mix.** Its entrants were 3.1 points below the national rate; 2.0
+  points of that is its industry × size mix. 79% of them employed no one, the highest share of any state, and
+  Victoria had 53% of the 8 states' entrants in Transport Support Services against 32.1% of entrants overall.
+- **Business numbers grew by 139,482 across LGAs, but not in businesses with staff:** non-employing businesses grew
+  by 149,180 and employing businesses fell by 9,698. In the 20 fastest-growing LGAs (8 of them in WA, led by
+  Kwinana at 22.2%), 91.8% of the net increase employed no one and 39.5% was in Transport, Postal and Warehousing.
+- **Counting employers tells a different story.** 199 of the 303 LGAs lost employing businesses even though only
+  31 lost businesses overall.
+
+![Mix vs state](results/charts/11_state_mix.png)
+
+![LGA growth](results/charts/13_lga_growth.png)
+
+**What it means.** Councils shouldn't read a rising business count as a growing local economy: in the fastest-growing
+LGAs most of the increase is businesses with no employees, the largest share of it in the industry with the lowest
+survival, so employing businesses (published in the same cube) are the better measure. State agencies should compare survival after the mix: New
+South Wales is 0.4 points below the national rate on raw figures but the weakest state once its mix is allowed for,
+while Victoria's 2021-22 dip is 65% mix. For lenders, the state effects (−1.4 points to +6.0 points) fine-tune the
+industry × size rate from Part 2; they don't replace it.
+
+The method was checked: a state's actual rate comes from data cube 5's state-total rows, which match data cube 1
+exactly (summing its small perturbed cells would put the Northern Territory at 46.9% instead of 49.2%); with
+subdivision instead of division cells, each state's unexplained part moves by at most 0.18 points.
+
 ## Plan
 
 | Part | What | Status |
 |---|---|---|
 | 1 | Source, download with pinned hashes, tidy snapshot, profile and rules | done |
 | 2 | Industries: survival within size bands, a common-size-mix comparison, subdivisions above the floor, cohort trends | done |
-| 3 | Regions: state survival across four cohorts, state × industry, LGA growth in business numbers | next |
-| 4 | A DuckDB SQL layer and a benchmark table for lenders and advisers (industry × state × size, with reliability flags) | |
+| 3 | Regions: state survival across four cohorts, states after their industry × size mix, LGA growth in business numbers | done |
+| 4 | A DuckDB SQL layer and a benchmark table for lenders and advisers (industry × state × size, with reliability flags) | next |
 | 5 | CI, recommendations, limitations and write-up | |
 
 ## How to run
@@ -118,6 +155,7 @@ pip install -r requirements.txt
 
 python scripts/profile_source.py      # Part 1 report and charts from the committed snapshot
 python scripts/industry_survival.py   # Part 2 report and charts
+python scripts/regions_report.py      # Part 3 report and charts
 python -m pytest                      # tests
 
 # optional: rebuild the snapshot from the ABS files
@@ -131,10 +169,12 @@ python scripts/build_snapshot.py      # data/*.csv.gz and data/SNAPSHOT.json (by
 cabee/load.py               parse the ABS workbooks into tidy tables; read the snapshot
 cabee/profile.py            Part 1 checks and measures
 cabee/industries.py         Part 2: size bands, common size mix, cohort trends, shift-share split
+cabee/regions.py            Part 3: states by cohort, expected rates from the mix, LGA growth
 scripts/download_data.py    fetch the workbooks, check SHA-256
 scripts/build_snapshot.py   write data/*.csv.gz and data/SNAPSHOT.json
 scripts/profile_source.py   write results/SOURCE_PROFILE.md, CSVs and charts 01-05
 scripts/industry_survival.py  write results/INDUSTRY_SURVIVAL.md, CSVs and charts 06-09
+scripts/regions_report.py   write results/REGIONS.md, CSVs and charts 10-14
 data/                       the tidy snapshot (survival, flows, subdivision_survival, lga_counts)
 results/                    reports, CSVs and charts
 tests/                      parser tests on hand-made sheets, snapshot invariants, report checks
@@ -142,7 +182,7 @@ tests/                      parser tests on hand-made sheets, snapshot invariant
 
 ## Tests
 
-74 tests: the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
+95 tests: the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
 invariants (entry cohorts equal that year's entries, start + entries − exits = end for every industry, every
 subdivision maps to an ANZSIC division, LGA totals equal the national count), the profile measures on hand-made
 frames, the real figures the report relies on, and a byte-for-byte regeneration of the Part 1 report, CSVs and
@@ -160,6 +200,16 @@ the national total within 10 businesses, subdivisions add up to divisions, no ra
 `cabee/industries.py` were tried on a scratch copy, and all 14 were caught. 19 planted errors in this
 README's Part 2 text were tried; 18 were caught at first, and the survivor ("about a third" for "about half")
 now has an exact check.
+
+Part 3 adds 21 tests (17 in `tests/test_regions.py`, 4 README checks): the measures on hand-made frames (the
+expected rate is an indirect standardisation on national cell rates and equals the actual rate when states share the
+same rates, the mix split adds up exactly, state size bands come from the state-total rows with the floor at exactly
+20, the Victorian excess sums to zero, LGA growth leaves out "No usual address" and Other Territories, the LGA floor
+is inclusive), the real figures (state rows equal data cube 1's counts exactly, state counts add to the national
+total, the small-cell bias, the three cell definitions agree, the LGA size bands add up) and a byte-for-byte
+regeneration of the Part 3 outputs. 18 planted bugs in `cabee/regions.py` were tried on a scratch copy, and all 18
+were caught. 26 planted errors in this README's Part 3 text were tried; 25 were caught at first, and the survivor
+("strongest" for "weakest") now has an exact check.
 
 ## Credit
 

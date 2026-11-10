@@ -151,3 +151,80 @@ def test_part2_weights_and_method_claims():
     assert "non-employing 73.5%, 1-4 employees 24.1%, 5 or more 2.4%" in flat
     assert "to within 0.05 points" in REPORT2 and "to within 0.05 points" in flat
     assert "the ranking is identical" in REPORT2 and "identical ranking" in flat
+
+
+# ------------------------------------------------------------------ Part 3
+REPORT3 = (ROOT / "results" / "REGIONS.md").read_text()
+
+
+def in_report3(fig: str) -> bool:
+    tail = r"(?![\w%]|[.,]\d)" if not fig.endswith("%") else ""
+    return re.search(r"(?<![\w.,])" + re.escape(fig) + tail, REPORT3) is not None
+
+
+def test_every_part3_figure_is_in_the_report():
+    part3 = section(README, "## Part 3")
+    missing = sorted(f for f in figures(part3) if not in_report3(f))
+    assert not missing, f"README Part 3 figures not in REGIONS.md: {missing}"
+
+
+PAIRS3 = [
+    ("Tasmania", "54.7%", "49.2%"),
+    ("New South Wales", "lowest", "48.0%"),
+    ("New South Wales", "49.0%", "47.6%", "1.4 points fewer"),
+    ("Tasmania", "6.0 points"),
+    ("South Australia", "+4.2 points", "Western Australia", "+3.7 points"),
+    ("Victoria", "3.1 points below", "2.0"),
+    ("79%", "employed no one", "highest share of any state"),
+    ("53%", "Transport Support Services"),
+    ("32.1%",),
+    ("139,482",),
+    ("non-employing", "149,180", "employing", "9,698"),
+    ("91.8%", "employed no one", "39.5%", "Transport, Postal and Warehousing"),
+    ("Kwinana", "22.2%"),
+    ("199 of the 303", "lost employing businesses", "31"),
+    ("Northern Territory", "46.9%", "49.2%"),
+    ("0.18 points",),
+    ("65% mix",),
+    ("−1.4 points", "+6.0 points"),
+]
+
+
+def test_part3_figures_stay_with_their_subject():
+    for pair in PAIRS3:
+        assert _sentence_with(section(README, "## Part 3"), *pair), f"README: {pair}"
+        assert _sentence_with(REPORT3, *pair), f"report: {pair}"
+
+
+PHRASES3 = [
+    "Tasmania keeps its new businesses longest, in every cohort",
+    "54.7% of its 2022-23 entrants were still trading three Junes on, against 49.2% nationally; New South Wales was "
+    "lowest at 48.0%",
+    "New South Wales would be expected to keep 49.0% of its 2021-22 entrants; it kept 47.6%, 1.4 points fewer, the "
+    "weakest of the 8 states on that basis",
+    "Tasmania kept 6.0 points more than its mix predicts, then South Australia (+4.2 points) and Western Australia "
+    "(+3.7 points)",
+    "Its entrants were 3.1 points below the national rate; 2.0 points of that is its industry × size mix",
+    "non-employing businesses grew by 149,180 and employing businesses fell by 9,698",
+    "91.8% of the net increase employed no one and 39.5% was in Transport, Postal and Warehousing",
+    "199 of the 303 LGAs lost employing businesses even though only 31 lost businesses overall",
+]
+
+
+def test_part3_phrases_match_the_report():
+    for p in PHRASES3:
+        assert p in _flat(README), f"README: {p}"
+        assert p in _flat(REPORT3), f"report: {p}"
+
+
+def test_part3_method_claims():
+    flat = _flat(README)
+    assert "WA 8," in REPORT3 and "(8 of them in WA" in flat
+    assert "Victoria had 32.1% of the 8 states' entrants overall" in _flat(REPORT3)
+    assert "Victoria's 2021-22 dip is 65% mix" in _flat(REPORT3) and "Victoria's 2021-22 dip is 65% mix" in flat
+    assert "on raw rates New South Wales is 0.4 points below" in _flat(REPORT3).replace("On raw", "on raw")
+    assert "New South Wales is 0.4 points below the national rate on raw figures" in flat
+    assert "at most 0.18 points" in REPORT3 and "at most 0.18 points" in flat
+    assert "after its mix it is the weakest state" in _flat(REPORT3)
+    assert "the weakest state once its mix is allowed for" in flat
+    assert "the 303 LGAs with 1,000 or more businesses" in flat and "303 LGAs with 1,000 or more businesses" in REPORT3

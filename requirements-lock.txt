@@ -1,0 +1,23 @@
+# Exact versions the committed reports, CSVs and charts were made with (uv pip freeze).
+# CI installs these so it can compare its regenerated outputs byte for byte.
+# For a looser install, use requirements.txt.
+contourpy==1.4.0
+cycler==0.12.1
+duckdb==2.0.0
+et-xmlfile==2.0.0
+fonttools==4.68.0
+iniconfig==2.3.1
+kiwisolver==1.5.1
+matplotlib==3.11.2
+numpy==2.5.4
+openpyxl==3.1.5
+packaging==26.3
+pandas==2.3.3
+pillow==13.0.0
+pluggy==1.7.0
+pygments==2.21.0
+pyparsing==3.3.3
+pytest==9.2.0
+python-dateutil==4.0.0
+pytz==2026.6
+tzdata==2026.6

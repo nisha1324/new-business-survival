@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reports-and-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+
+      # The lock file pins the versions the committed outputs were made with,
+      # so the reports, CSVs and charts below can be compared byte for byte.
+      - name: Install dependencies
+        run: pip install -r requirements-lock.txt
+
+      # Rerun every report from the committed snapshot in data/ (no download needed).
+      # If any committed report, CSV or chart changes, fail and show what changed.
+      - name: Regenerate reports and check nothing changed
+        run: |
+          python scripts/profile_source.py
+          python scripts/industry_survival.py
+          python scripts/regions_report.py
+          python scripts/benchmark_report.py
+          git status --porcelain
+          test -z "$(git status --porcelain)" || { git diff --stat; exit 1; }
+
+      # Parsers, snapshot invariants, every part's measures on hand-made data,
+      # SQL vs pandas parity, and the README figures tied to the reports.
+      # The raw-rebuild test is skipped here because data/raw/ isn't committed.
+      - name: pytest
+        run: pytest -q

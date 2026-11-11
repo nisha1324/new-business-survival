@@ -92,8 +92,8 @@ def chart_common_mix(d: pd.DataFrame, path: Path) -> None:
     short = mv["industry"].replace(" Services", "").replace(" and ", " & ")
     fig.text(0.015, 0.975, f"At the same size mix, {short} drops to {ordinal(int(mv['rank_std']))} lowest", fontsize=12,
              fontweight="bold", color=INK, va="top")
-    fig.text(0.015, 0.945, "2021-22 entrants by industry. In brackets: rank from lowest at the national size mix. "
-             "Labels: overall → national mix, where 2+ points", fontsize=9, color=INK_2, va="top")
+    fig.text(0.015, 0.945, "2021-22 entrants by industry. Brackets: rank from lowest at the national size mix. "
+             "Labels: changes of 2+ points", fontsize=9, color=INK_2, va="top")
     fig.tight_layout(rect=(0, 0, 1, 0.9))
     h_, l_ = ax.get_legend_handles_labels()
     fig.legend(h_, l_, loc="upper left", bbox_to_anchor=(0.008, 0.93), frameon=False, ncol=2, fontsize=9,

@@ -136,7 +136,7 @@ def chart_size(sm: pd.DataFrame, path: Path) -> None:
 
 
 def chart_mix(mix: pd.DataFrame, path: Path) -> None:
-    m = mix.sort_values("rate_all")
+    m = mix.sort_values("rate_all", kind="stable")
     fig, ax = plt.subplots(figsize=(8.5, 7.2))
     y = list(range(len(m)))
     for i, (_, r) in enumerate(m.iterrows()):
@@ -225,7 +225,7 @@ def main() -> int:
     acc = mix.loc[low]
     rank_all = int(mix["rate_all"].rank().loc[low])
     rank_emp = int(mix["rate_employing"].rank().loc[low])
-    hi_non = mix.sort_values("non_employing_share", ascending=False)
+    hi_non = mix.sort_values("non_employing_share", ascending=False, kind="stable")
     top2 = hi_non.iloc[:2]
     gm = rev["group_max"]
     dmax = mix.loc[mix["diff"].abs().idxmax()]

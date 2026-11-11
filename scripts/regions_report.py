@@ -54,7 +54,7 @@ def short(ind: str) -> str:
 # ------------------------------------------------------------------ charts
 def chart_state_cohorts(t: pd.DataFrame, path: Path) -> None:
     first, last = COHORTS[0], COHORTS[-1]
-    m = t.drop(index=R.NATIONAL).sort_values(last)
+    m = t.drop(index=R.NATIONAL).sort_values(last, kind="stable")
     nat = t.loc[R.NATIONAL]
     fig, ax = plt.subplots(figsize=(8.5, 4.8))
     y = list(range(len(m)))
@@ -88,7 +88,7 @@ def chart_state_cohorts(t: pd.DataFrame, path: Path) -> None:
 
 
 def chart_state_mix(ms: pd.DataFrame, national: float, path: Path) -> None:
-    m = ms.sort_values("local")
+    m = ms.sort_values("local", kind="stable")
     fig, ax = plt.subplots(figsize=(8.5, 4.8))
     y = list(range(len(m)))
     for i, (_, r) in enumerate(m.iterrows()):
@@ -186,7 +186,7 @@ def chart_lga(top: pd.DataFrame, path: Path) -> None:
 
 
 def chart_drivers(dr: pd.DataFrame, path: Path) -> None:
-    m = dr[dr.index != "Currently Unknown"].sort_values("change", ascending=False)
+    m = dr[dr.index != "Currently Unknown"].sort_values("change", ascending=False, kind="stable")
     assert (m["non_employing_change"] > 0).sum() > len(m) / 2 and (m["employing_change"] < 0).sum() > len(m) / 2
     fig, ax = plt.subplots(figsize=(8.5, 6.6))
     y = list(range(len(m)))
@@ -276,7 +276,7 @@ def main() -> int:
     vic = st.loc["Victoria"]
     sfs = sf.drop(index=R.NATIONAL)
     fastest, slowest = sfs["growth"].idxmax(), sfs["growth"].idxmin()
-    loc_rank = ms.sort_values("local")
+    loc_rank = ms.sort_values("local", kind="stable")
     gap_spread = max((sp["local"] - ms["local"]).abs().max() for sp in splits.values())
     swapped = sorted({x for sp in splits.values() for x in sp.index
                       if sp["local"].rank()[x] != ms["local"].rank()[x]}, key=R.STATES.index)
@@ -304,7 +304,7 @@ def main() -> int:
     top_tr = int((top["top_division"] == "Transport, Postal and Warehousing").sum())
     shrink = rk[rk["growth"] < 0]
     emp_fell = rk[rk["employing_growth"] < 0]
-    emp_top = rk.sort_values(["employing_growth", "lga"], ascending=[False, True]).head(5)
+    emp_top = rk.sort_values(["employing_growth", "lga"], ascending=[False, True], kind="stable").head(5)
     corr = float(rk[["growth", "employing_growth"]].corr().iloc[0, 1])
     neg_emp_ind = dr_all[(dr_all["employing_change"] < 0) & (dr_all.index != "Currently Unknown")]
     n_ind = int((dr_all.index != "Currently Unknown").sum())
@@ -329,7 +329,7 @@ def main() -> int:
     p2_span = float(p2["rate_Non-employing"].max() - p2["rate_Non-employing"].min())
     assert p2_span > 2 * (ms["local"].max() - ms["local"].min())
     p2_big = I.subdivision_bands(sub, s)
-    p2_big = p2_big[(p2_big["entries"] >= MIN_ENTRANTS) & p2_big["std_2"].notna()].sort_values("std_2")
+    p2_big = p2_big[(p2_big["entries"] >= MIN_ENTRANTS) & p2_big["std_2"].notna()].sort_values("std_2", kind="stable")
     p2_pos = sorted(int(p2_big.index.get_loc(c)) + 1 for c in ex3.index)
     vic_fast = rk.head(10)[rk.head(10)["state"] == "Victoria"]
     vic_pos = [int(rk.index.get_loc(i)) + 1 for i in vic_fast.index]
@@ -386,7 +386,7 @@ def main() -> int:
     a(f"| State | {' | '.join(COHORTS)} | Change | {last} entrants | Rank {last} | All businesses, {bst[0]} | "
       f"All businesses, {bst[-1]} |")
     a("|---|" + "---|" * (len(COHORTS) + 5))
-    for name, r in st.sort_values(last).iterrows():
+    for name, r in st.sort_values(last, kind="stable").iterrows():
         a(f"| {name} | {' | '.join(rate(r[c]) for c in COHORTS)} | {sgn(r['change'])} | {n(r['entries_latest'])} | "
           f"{int(r[f'rank_{last}'])} | {rate(r['businesses_first'])} | {rate(r['businesses_latest'])} |")
     a(f"| **Australia** | {' | '.join(rate(nat[c]) for c in COHORTS)} | {sgn(nat['change'])} | "
@@ -472,7 +472,7 @@ def main() -> int:
     a("")
     a("| State | Entrants | Non-employing share | Non-employing | 1-4 | 5+ | Overall | At national size mix |")
     a("|---|---|---|---|---|---|---|---|")
-    for name, r in sb.sort_values("std").iterrows():
+    for name, r in sb.sort_values("std", kind="stable").iterrows():
         a(f"| {name} | {n(r['entries'])} | {pct(r['non_employing_share'], 0)} | {rate(r['rate_Non-employing'])} | "
           f"{rate(r['rate_1-4'])} | {rate(r['rate_5+'])} | {rate(r['rate_all'])} | {rate(r['std'])} |")
     a("")

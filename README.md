@@ -236,7 +236,7 @@ tests/                      parser tests on hand-made sheets, snapshot invariant
 
 ## Tests
 
-125 tests: Part 1's cover the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
+128 tests: Part 1's cover the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
 invariants (entry cohorts equal that year's entries, start + entries − exits = end for every industry, every
 subdivision maps to an ANZSIC division, LGA totals equal the national count), the profile measures on hand-made
 frames, the real figures the report relies on, and a byte-for-byte regeneration of the Part 1 report, CSVs and

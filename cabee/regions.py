@@ -94,8 +94,8 @@ def state_flows(flows: pd.DataFrame) -> pd.DataFrame:
     ``exit_rate`` are entries (exits) over businesses operating at the start
     of the year, summed over all years. The last row is Australia.
     """
-    t = flows[(flows.dimension == "state") & flows.group.isin(STATES + [NATIONAL])].sort_values("release")
-    t = t.groupby(["group", "fin_year"]).last().reset_index().sort_values("fin_year")
+    t = flows[(flows.dimension == "state") & flows.group.isin(STATES + [NATIONAL])].sort_values("release", kind="stable")
+    t = t.groupby(["group", "fin_year"]).last().reset_index().sort_values("fin_year", kind="stable")
     g = t.groupby("group")
     out = pd.DataFrame({
         "start_year": g["fin_year"].first(),
@@ -229,7 +229,7 @@ def excess_entrants(sub: pd.DataFrame, state: str = "Victoria") -> pd.DataFrame:
         "rate_rest": (100 * rest["survived"] / rest["base"]).where(rest["base"] > SMALL_BASE),
     }).reset_index("subdivision")
     out.attrs["overall_share"] = overall
-    return out.sort_values("excess", ascending=False)
+    return out.sort_values("excess", ascending=False, kind="stable")
 
 
 def without(actual_base: float, actual_survived: float, rows: pd.DataFrame) -> float:
@@ -280,18 +280,18 @@ def lga_growth(lga: pd.DataFrame, first: int = LGA_FIRST, last: int = LGA_LAST) 
     dc = d.pivot_table(index=["state", "lga_code", "lga", "industry"], columns="june", values="count",
                        aggfunc="sum").fillna(0)
     dc = (dc[last] - dc[first]).rename("chg").reset_index()
-    top = dc.sort_values(["chg", "industry"], ascending=[False, True]).groupby(["state", "lga_code", "lga"]).head(1)
+    top = dc.sort_values(["chg", "industry"], ascending=[False, True], kind="stable").groupby(["state", "lga_code", "lga"]).head(1)
     top = top.set_index(["state", "lga_code", "lga"])
     out["top_division"] = top["industry"]
     out["top_division_change"] = top["chg"]
     out = out.reset_index()
     out["state_abbr"] = out["state"].map(ABBR)
-    return out.sort_values("growth", ascending=False).reset_index(drop=True)
+    return out.sort_values("growth", ascending=False, kind="stable").reset_index(drop=True)
 
 
 def ranked(g: pd.DataFrame, floor: int = LGA_FLOOR, first: int = LGA_FIRST) -> pd.DataFrame:
     """LGAs with at least ``floor`` businesses in June ``first``, fastest-growing first."""
-    return g[g[f"businesses_{first}"] >= floor].sort_values(["growth", "lga"], ascending=[False, True])
+    return g[g[f"businesses_{first}"] >= floor].sort_values(["growth", "lga"], ascending=[False, True], kind="stable")
 
 
 def growth_drivers(lga: pd.DataFrame, codes=None, first: int = LGA_FIRST, last: int = LGA_LAST) -> pd.DataFrame:
@@ -317,7 +317,7 @@ def growth_drivers(lga: pd.DataFrame, codes=None, first: int = LGA_FIRST, last: 
     out["change"] = out["non_employing_change"] + out["employing_change"]
     out["growth"] = out["change"] / out[f"businesses_{first}"]
     out["share"] = out["change"] / out["change"].sum()
-    return out.sort_values("change", ascending=False)
+    return out.sort_values("change", ascending=False, kind="stable")
 
 
 def size_change(lga: pd.DataFrame, codes=None, first: int = LGA_FIRST, last: int = LGA_LAST) -> pd.DataFrame:

@@ -28,8 +28,8 @@ Share of each cohort's entrants still trading three Junes after the entry year (
 | Construction | 49.6% | 48.4% | 46.8% | 48.0% | −1.6 | 73,113 | 7 | 0 |
 | Electricity, Gas, Water and Waste Services | 53.1% | 53.8% | 47.3% | 49.0% | −4.1 | 1,256 | 8 | 0 |
 | Arts and Recreation Services | 55.8% | 49.7% | 48.6% | 50.0% | −5.8 | 6,649 | 9 | 0 |
-| Education and Training | 53.3% | 51.5% | 50.6% | 50.4% | −2.9 | 6,408 | 10 | 0 |
 | Accommodation and Food Services | 52.8% | 48.5% | 48.4% | 50.4% | −2.4 | 18,340 | 10 | 0 |
+| Education and Training | 53.3% | 51.5% | 50.6% | 50.4% | −2.9 | 6,408 | 10 | 0 |
 | Professional, Scientific and Technical Services | 53.1% | 50.7% | 51.0% | 51.3% | −1.8 | 51,382 | 12 | 0 |
 | Other Services | 54.9% | 50.9% | 47.2% | 51.4% | −3.5 | 21,766 | 13 | 0 |
 | Financial and Insurance Services | 52.9% | 52.7% | 52.0% | 52.0% | −0.9 | 18,658 | 14 | 0 |

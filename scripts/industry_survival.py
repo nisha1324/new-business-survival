@@ -39,7 +39,7 @@ def pts(x: float, nd: int = 1) -> str:
 # ------------------------------------------------------------------ charts
 def chart_cohorts(t: pd.DataFrame, path: Path) -> None:
     first, last = I.COHORTS[0], I.COHORTS[-1]
-    m = t.sort_values(last)
+    m = t.sort_values(last, kind="stable")
     fig, ax = plt.subplots(figsize=(8.5, 7.4))
     y = list(range(len(m)))
     for i, (_, r) in enumerate(m.iterrows()):
@@ -68,7 +68,7 @@ def chart_cohorts(t: pd.DataFrame, path: Path) -> None:
 
 
 def chart_common_mix(d: pd.DataFrame, path: Path) -> None:
-    m = d.sort_values("std", ascending=False)
+    m = d.sort_values("std", ascending=False, kind="stable")
     fig, ax = plt.subplots(figsize=(8.5, 7.4))
     y = list(range(len(m)))
     for i, (_, r) in enumerate(m.iterrows()):
@@ -88,7 +88,7 @@ def chart_common_mix(d: pd.DataFrame, path: Path) -> None:
     ax.spines[["top", "right", "left"]].set_visible(False)
     ax.tick_params(length=0)
     ax.set_axisbelow(True)
-    mv = d.sort_values("mix_effect").iloc[-1]
+    mv = d.sort_values("mix_effect", kind="stable").iloc[-1]
     short = mv["industry"].replace(" Services", "").replace(" and ", " & ")
     fig.text(0.015, 0.975, f"At the same size mix, {short} drops to {ordinal(int(mv['rank_std']))} lowest", fontsize=12,
              fontweight="bold", color=INK, va="top")
@@ -103,7 +103,7 @@ def chart_common_mix(d: pd.DataFrame, path: Path) -> None:
 
 
 def chart_subdivisions(sd: pd.DataFrame, national: float, path: Path, k: int = 10) -> None:
-    big = sd[(sd["entries"] >= MIN_ENTRANTS) & sd["std_2"].notna()].sort_values("std_2")
+    big = sd[(sd["entries"] >= MIN_ENTRANTS) & sd["std_2"].notna()].sort_values("std_2", kind="stable")
     m = pd.concat([big.head(k), big.tail(k)])
     fig, ax = plt.subplots(figsize=(8.5, 7.6))
     y = [i if i < k else i + 1 for i in range(len(m))]
@@ -196,19 +196,19 @@ def main() -> int:
     # --- figures used in the text
     bottom = t.head(5)
     top = t.tail(3).iloc[::-1]
-    falls = t.sort_values("change")
-    rises = t[t["change"] > 0].sort_values("change", ascending=False)
+    falls = t.sort_values("change", kind="stable")
+    rises = t[t["change"] > 0].sort_values("change", ascending=False, kind="stable")
     fjs = t["first_june_share_of_loss"]
     r1_nat = s[(s.dimension == "industry") & (s.level == "total") & (s.cohort == "entries") & (s.start == last)]
     r1_nat = r1_nat.set_index("years_after")["rate_pub"]
     nat_fjs = (100 - r1_nat[1]) / (100 - r1_nat[3])
     retail = t.loc["Retail Trade"]
-    movers = d.sort_values("mix_effect")
+    movers = d.sort_values("mix_effect", kind="stable")
     up = movers.iloc[-1]   # overall rate most flattered by its size mix
     down = movers.iloc[0]  # overall rate most held down by its size mix
     std_gap = (d["std"] - d["std_2"]).abs()
     same_order = bool((d["std"].rank() == d["std_2"].rank()).all())
-    big = sd[(sd["entries"] >= MIN_ENTRANTS) & sd["std_2"].notna()].sort_values("std_2")
+    big = sd[(sd["entries"] >= MIN_ENTRANTS) & sd["std_2"].notna()].sort_values("std_2", kind="stable")
     rated = sd[sd["std_2"].notna()]
     big_share = big["entries"].sum() / sd["entries"].sum()
     low5, high5 = big.head(5), big.tail(5).iloc[::-1]
@@ -460,7 +460,7 @@ def sub_small_bands(sub: pd.DataFrame) -> pd.DataFrame:
     x = sub[(sub.cohort == "entries") & (sub.years_after == 3) & (sub.level == "group") & (sub.division != "X")
             & sub["size"].isin(["20-199", "200+"])]
     g = x.groupby("division")["base"].sum()
-    g = g[g <= SMALL_BASE].sort_values()
+    g = g[g <= SMALL_BASE].sort_values(kind="stable")
     return pd.DataFrame({"industry": [I.DIVISION_NAMES[k] for k in g.index], "entrants": g.values})
 
 

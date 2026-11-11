@@ -45,7 +45,7 @@ Survival of each entry cohort, by June after the entry year:
 | Data cube 1: groups + 'unknown' add to the total | 140 tables across 5 dimensions, largest gap 0 businesses |
 | Survival base for entries = entries in the counts table | equal in every release, industry and state (checked in tests) |
 | National totals across overlapping releases | 40 overlapping cells, 0 revised |
-| Industry and state groups across overlapping releases | 523 of 540 overlapping cells revised, median 0.10%, largest named group Retail Trade (operating start, 2021-22): 147,533 to 149,110 (1.1%) |
+| Industry and state groups across overlapping releases | 523 of 540 overlapping cells revised, median 0.10%, largest named group Retail Trade (operating end, 2020-21): 147,533 to 149,110 (1.1%) |
 | Data cubes 4/5 state totals vs data cube 1 (June 2021 – June 2025) | 70 pairs, largest gap 0 (base), 0 (survived), 0.0 (rate) |
 | Division rates rebuilt from data cube 5's cells vs data cube 1's published rates | within 0.78 points (largest: Mining) |
 | Data cubes 4/5: size bands add to the row total | 2,266 of 5,418 rows don't, by −4 to +5 businesses |

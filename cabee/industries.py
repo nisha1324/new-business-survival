@@ -62,7 +62,7 @@ def division_trend(survival: pd.DataFrame, bottom_k: int = 5) -> pd.DataFrame:
     out["cohorts_in_bottom"] = (ranks <= bottom_k).sum(axis=1)
     out["first_june_share_of_loss"] = (100 - r1) / (100 - r3[last])
     out.index.name = "industry"
-    return out.sort_values(last)
+    return out.sort_values(last, kind="stable")
 
 
 def rank_stability(trend: pd.DataFrame) -> dict:
@@ -159,7 +159,7 @@ def division_bands(sub: pd.DataFrame, survival: pd.DataFrame) -> pd.DataFrame:
     for col in ["rate_all", "std", *[f"rate_{b}" for b in BANDS]]:
         out[f"rank_{col}"] = out[col].rank(method="min").astype(int)
     out.index.name = "division"
-    return out.sort_values("std")
+    return out.sort_values("std", kind="stable")
 
 
 def subdivision_bands(sub: pd.DataFrame, survival: pd.DataFrame) -> pd.DataFrame:
@@ -183,4 +183,4 @@ def subdivision_bands(sub: pd.DataFrame, survival: pd.DataFrame) -> pd.DataFrame
     out = out.reset_index(["subdivision", "division"])
     out["industry"] = out["division"].map(DIVISION_NAMES)
     out["rank_std_2"] = out["std_2"].rank(method="min")
-    return out.sort_values(["std_2", "rate_all"])
+    return out.sort_values(["std_2", "rate_all"], kind="stable")

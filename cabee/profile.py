@@ -31,7 +31,7 @@ def headline(survival: pd.DataFrame) -> pd.DataFrame:
 def entry_curves(survival: pd.DataFrame) -> pd.DataFrame:
     """National survival of each entry cohort to the 1st, 2nd and 3rd June."""
     t = survival[(survival.dimension == "industry") & (survival.level == "total") & (survival.cohort == "entries")]
-    return t.pivot_table(index="start", columns="years_after", values="rate_pub").sort_index()
+    return t.pivot_table(index="start", columns="years_after", values="rate_pub").sort_index(kind="stable")
 
 
 def rate_consistency(survival: pd.DataFrame) -> dict:
@@ -56,7 +56,7 @@ def additivity(survival: pd.DataFrame) -> pd.DataFrame:
 
 def flow_series(flows: pd.DataFrame) -> pd.DataFrame:
     """National entries, exits and counts per financial year, each from the latest release that has it."""
-    t = flows[(flows.dimension == "industry") & (flows.level == "total")].sort_values("release")
+    t = flows[(flows.dimension == "industry") & (flows.level == "total")].sort_values("release", kind="stable")
     return t.groupby("fin_year").last().reset_index()[
         ["fin_year", "release", "operating_start", "births", "entries_other", "entries",
          "cancellations", "exits_other", "exits", "operating_end"]]
@@ -79,9 +79,9 @@ def revisions(flows: pd.DataFrame) -> dict:
     out["total_cells"], out["total_changed"] = len(tot), int((tot["range"] > 0).sum())
     out["group_cells"], out["group_changed"] = len(named), int((named["range"] > 0).sum())
     out["group_median_pct"] = float(named["pct"].median())
-    big = named.sort_values("pct", ascending=False).iloc[0]
+    big = named.sort_values("pct", ascending=False, kind="stable").iloc[0]
     out["group_max"] = {k: big[k] for k in ("dimension", "fin_year", "group", "variable", "min", "max", "pct")}
-    big_abs = named.sort_values("range", ascending=False).iloc[0]
+    big_abs = named.sort_values("range", ascending=False, kind="stable").iloc[0]
     out["group_max_abs"] = {k: big_abs[k] for k in ("dimension", "fin_year", "group", "variable", "min", "max", "range", "pct")}
     out["unknown_max_pct"] = float(unknown["pct"].max())
     return out
@@ -122,7 +122,7 @@ def division_size_mix(sub: pd.DataFrame) -> pd.DataFrame:
         "rate_non_employing": 100 * surv["Non employing"] / base["Non employing"],
         "rate_employing": 100 * (surv["Total"] - surv["Non employing"]) / (base["Total"] - base["Non employing"]),
     }, index=base.index)
-    return out.sort_values("rate_all")
+    return out.sort_values("rate_all", kind="stable")
 
 
 def division_check(sub: pd.DataFrame, survival: pd.DataFrame) -> pd.DataFrame:
@@ -190,7 +190,7 @@ def lga_checks(lga: pd.DataFrame, flows: pd.DataFrame) -> dict:
     j["pct"] = 100 * (j["sum"] - j["total"]) / j["total"]
     main = j.drop(index="Other Territories/Currently Unknown", level="state")
     out["state_pct_min"], out["state_pct_max"] = float(main["pct"].min()), float(main["pct"].max())
-    worst = main["pct"].abs().groupby(level="state").max().sort_values(ascending=False)
+    worst = main["pct"].abs().groupby(level="state").max().sort_values(ascending=False, kind="stable")
     out["worst_states"] = [(s, float(main.xs(s, level="state")["pct"].iloc[main.xs(s, level="state")["pct"].abs().argmax()]))
                            for s in worst.index[:2]]
     out["lgas"] = int(x[x.june == x.june.max()]["lga_code"].nunique())

@@ -354,8 +354,8 @@ Western Australia,52240,Cranbrook,224.0,227.0,87.0,81.0,137.0,146.0,3.0,0.0134,-
 New South Wales,14850,Lismore,4367.0,4423.0,1558.0,1503.0,2809.0,2920.0,56.0,0.0128,-55.0,-0.0353,111.0,1.9821,Health Care and Social Assistance,93,NSW,True
 Queensland,30760,Blackall Tambo,393.0,398.0,129.0,132.0,263.0,268.0,5.0,0.0127,3.0,0.0233,5.0,1.0,Other Services,4,Qld,False
 Victoria,23350,Indigo,1974.0,1999.0,657.0,661.0,1316.0,1337.0,25.0,0.0127,4.0,0.0061,21.0,0.84,"Rental, Hiring and Real Estate Services",14,Vic,True
-Western Australia,55530,Mingenew,79.0,80.0,42.0,40.0,37.0,40.0,1.0,0.0127,-2.0,-0.0476,3.0,3.0,"Rental, Hiring and Real Estate Services",2,WA,False
 Western Australia,54760,Kulin,158.0,160.0,74.0,77.0,84.0,85.0,2.0,0.0127,3.0,0.0405,1.0,0.5,Financial and Insurance Services,3,WA,False
+Western Australia,55530,Mingenew,79.0,80.0,42.0,40.0,37.0,40.0,1.0,0.0127,-2.0,-0.0476,3.0,3.0,"Rental, Hiring and Real Estate Services",2,WA,False
 Tasmania,63410,King Island,318.0,322.0,116.0,115.0,202.0,207.0,4.0,0.0126,-1.0,-0.0086,5.0,1.25,Construction,7,Tas,False
 Western Australia,52030,Coorow,160.0,162.0,59.0,64.0,101.0,97.0,2.0,0.0125,5.0,0.0847,-4.0,-2.0,Accommodation and Food Services,3,WA,False
 New South Wales,17040,Snowy Monaro Regional,2878.0,2913.0,1301.0,1233.0,1579.0,1682.0,35.0,0.0122,-68.0,-0.0523,103.0,2.9429,Construction,22,NSW,True
@@ -407,19 +407,19 @@ Victoria,22170,Frankston,11482.0,11516.0,4832.0,4592.0,6650.0,6924.0,34.0,0.003,
 South Australia,47910,Tumby Bay,351.0,352.0,135.0,128.0,216.0,224.0,1.0,0.0028,-7.0,-0.0519,8.0,8.0,"Rental, Hiring and Real Estate Services",10,SA,False
 New South Wales,17650,Uralla,677.0,678.0,242.0,214.0,435.0,464.0,1.0,0.0015,-28.0,-0.1157,29.0,29.0,"Rental, Hiring and Real Estate Services",7,NSW,False
 Tasmania,61810,Dorset,885.0,886.0,353.0,340.0,532.0,546.0,1.0,0.0011,-13.0,-0.0368,14.0,14.0,Construction,5,Tas,False
-South Australia,40250,Anangu Pitjantjatjara Yankunytjatjara,5.0,5.0,3.0,3.0,3.0,3.0,0.0,0.0,0.0,,0.0,,Construction,3,SA,False
 New South Wales,11400,Cabonne,2044.0,2044.0,720.0,685.0,1324.0,1359.0,0.0,0.0,-35.0,-0.0486,35.0,,"Rental, Hiring and Real Estate Services",30,NSW,True
-Western Australia,58400,Trayning,60.0,60.0,28.0,29.0,33.0,33.0,0.0,0.0,1.0,0.0357,0.0,,"Agriculture, Forestry and Fishing",4,WA,False
-Northern Territory,71700,Groote Archipelago,5.0,5.0,3.0,6.0,3.0,3.0,0.0,0.0,3.0,,0.0,,Construction,3,NT,False
-Western Australia,55880,Mount Marshall,102.0,102.0,42.0,41.0,60.0,60.0,0.0,0.0,-1.0,-0.0238,0.0,,Accommodation and Food Services,3,WA,False
-Western Australia,56160,Murchison,4.0,4.0,0.0,3.0,3.0,3.0,0.0,0.0,3.0,,0.0,,"Professional, Scientific and Technical Services",3,WA,False
 New South Wales,16200,Parkes,1411.0,1411.0,566.0,542.0,844.0,869.0,0.0,0.0,-24.0,-0.0424,25.0,,"Rental, Hiring and Real Estate Services",10,NSW,True
-Western Australia,51120,Bruce Rock,147.0,147.0,67.0,72.0,79.0,76.0,0.0,0.0,5.0,0.0746,-3.0,,Arts and Recreation Services,3,WA,False
 Northern Territory,70700,Coomalie,127.0,127.0,41.0,41.0,86.0,86.0,0.0,0.0,0.0,0.0,0.0,,Arts and Recreation Services,3,NT,False
+Northern Territory,71700,Groote Archipelago,5.0,5.0,3.0,6.0,3.0,3.0,0.0,0.0,3.0,,0.0,,Construction,3,NT,False
+Queensland,33830,Hope Vale,15.0,15.0,6.0,9.0,10.0,6.0,0.0,0.0,3.0,,-4.0,,Construction,4,Qld,False
+South Australia,40250,Anangu Pitjantjatjara Yankunytjatjara,5.0,5.0,3.0,3.0,3.0,3.0,0.0,0.0,0.0,,0.0,,Construction,3,SA,False
+Western Australia,51120,Bruce Rock,147.0,147.0,67.0,72.0,79.0,76.0,0.0,0.0,5.0,0.0746,-3.0,,Arts and Recreation Services,3,WA,False
 Western Australia,54130,Jerramungup,234.0,234.0,105.0,97.0,129.0,137.0,0.0,0.0,-8.0,-0.0762,8.0,,Other Services,4,WA,False
 Western Australia,54620,Kondinin,180.0,180.0,87.0,92.0,93.0,89.0,0.0,0.0,5.0,0.0575,-4.0,,"Agriculture, Forestry and Fishing",3,WA,False
 Western Australia,54970,Laverton,33.0,33.0,15.0,15.0,18.0,17.0,0.0,0.0,0.0,,-1.0,,Education and Training,3,WA,False
-Queensland,33830,Hope Vale,15.0,15.0,6.0,9.0,10.0,6.0,0.0,0.0,3.0,,-4.0,,Construction,4,Qld,False
+Western Australia,55880,Mount Marshall,102.0,102.0,42.0,41.0,60.0,60.0,0.0,0.0,-1.0,-0.0238,0.0,,Accommodation and Food Services,3,WA,False
+Western Australia,56160,Murchison,4.0,4.0,0.0,3.0,3.0,3.0,0.0,0.0,3.0,,0.0,,"Professional, Scientific and Technical Services",3,WA,False
+Western Australia,58400,Trayning,60.0,60.0,28.0,29.0,33.0,33.0,0.0,0.0,1.0,0.0357,0.0,,"Agriculture, Forestry and Fishing",4,WA,False
 Victoria,27450,Yarra Ranges,14005.0,13996.0,5819.0,5526.0,8186.0,8470.0,-9.0,-0.0006,-293.0,-0.0504,284.0,-31.5556,Health Care and Social Assistance,135,Vic,True
 South Australia,48340,Wattle Range,1460.0,1459.0,524.0,488.0,936.0,970.0,-1.0,-0.0007,-36.0,-0.0687,34.0,-34.0,Construction,15,SA,True
 New South Wales,10600,Bellingen,1339.0,1338.0,505.0,471.0,834.0,867.0,-1.0,-0.0007,-34.0,-0.0673,33.0,-33.0,Health Care and Social Assistance,16,NSW,True
@@ -502,8 +502,8 @@ Western Australia,55040,Leonora,60.0,58.0,21.0,18.0,39.0,38.0,-2.0,-0.0333,-3.0,
 Western Australia,51540,Carnarvon,598.0,577.0,242.0,224.0,356.0,353.0,-21.0,-0.0351,-18.0,-0.0744,-3.0,0.1429,Wholesale Trade,4,WA,False
 South Australia,40520,Berri Barmera,1013.0,976.0,373.0,325.0,640.0,651.0,-37.0,-0.0365,-48.0,-0.1287,11.0,-0.2973,Health Care and Social Assistance,6,SA,True
 Victoria,21670,Central Goldfields,893.0,860.0,380.0,343.0,512.0,518.0,-33.0,-0.037,-37.0,-0.0974,6.0,-0.1818,Health Care and Social Assistance,10,Vic,False
-Victoria,26080,Queenscliffe,370.0,356.0,155.0,149.0,215.0,207.0,-14.0,-0.0378,-6.0,-0.0387,-8.0,0.5714,"Rental, Hiring and Real Estate Services",4,Vic,False
 Northern Territory,70420,Barkly,185.0,178.0,84.0,89.0,101.0,89.0,-7.0,-0.0378,5.0,0.0595,-12.0,1.7143,Construction,3,NT,False
+Victoria,26080,Queenscliffe,370.0,356.0,155.0,149.0,215.0,207.0,-14.0,-0.0378,-6.0,-0.0387,-8.0,0.5714,"Rental, Hiring and Real Estate Services",4,Vic,False
 Queensland,34710,Longreach,659.0,634.0,251.0,228.0,408.0,406.0,-25.0,-0.0379,-23.0,-0.0916,-2.0,0.08,Financial and Insurance Services,4,Qld,False
 Western Australia,54550,Kojonup,522.0,502.0,169.0,142.0,353.0,360.0,-20.0,-0.0383,-27.0,-0.1598,7.0,-0.35,"Rental, Hiring and Real Estate Services",6,WA,False
 Queensland,31750,Bulloo,49.0,47.0,19.0,18.0,32.0,30.0,-2.0,-0.0408,-1.0,,-2.0,1.0,"Rental, Hiring and Real Estate Services",4,Qld,False

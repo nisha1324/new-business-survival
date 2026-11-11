@@ -53,7 +53,7 @@ def chart_bias(pc: pd.DataFrame, path: Path) -> None:
                marker="o", label="State × size band: cells vs state totals")
     ax.scatter(100 * dv.small_share, dv.bias, s=46, color=ORANGE, edgecolor=SURFACE, linewidth=1.5, zorder=3,
                marker="s", label="Industry: cells vs data cube 1")
-    worst = pc.nsmallest(4, "bias").sort_values("small_share")
+    worst = pc.nsmallest(4, "bias").sort_values("small_share", kind="stable")
     for k, (_, r) in enumerate(worst.iterrows()):
         dy = -12 if k % 2 else 10   # alternate below/above so neighbouring labels don't collide
         ax.annotate(r["label"], (100 * r.small_share, r.bias), xytext=(0, dy), textcoords="offset points",
@@ -116,9 +116,9 @@ def chart_grid(b: pd.DataFrame, path: Path) -> None:
     cmap = mcolors.LinearSegmentedColormap.from_list("blue", RAMP)
     lo, hi = 25, 80
     norm = mcolors.Normalize(lo, hi)
-    order = (b[b.band == "Non-employing"].drop_duplicates("industry").sort_values("national_rate", ascending=False)
+    order = (b[b.band == "Non-employing"].drop_duplicates("industry").sort_values("national_rate", ascending=False, kind="stable")
              .industry.tolist())
-    states = b.drop_duplicates("abbr").sort_values("state_order").abbr.tolist()
+    states = b.drop_duplicates("abbr").sort_values("state_order", kind="stable").abbr.tolist()
     fig, axes = plt.subplots(1, 2, figsize=(13, 8.2), sharey=True)
     for ax, band in zip(axes, ["Non-employing", "1-4"]):
         t = b[b.band == band].set_index(["industry", "abbr"])
@@ -213,7 +213,7 @@ def main() -> int:
     r0, r1 = db["std"].rank(method="min"), std_adj.rank(method="min")
     max_move = int((r1 - r0).abs().max())
     bottom5_same = set(r0.nsmallest(5).index) == set(r1.nsmallest(5).index)
-    big_bias = dv[dv.bias < -1].sort_values("bias")
+    big_bias = dv[dv.bias < -1].sort_values("bias", kind="stable")
     n12, n_cube5 = con.execute("SELECT count(*) FILTER (WHERE base IN (1, 2) OR survived IN (1, 2)), count(*) "
                                "FROM subdivision_survival WHERE level = 'group'").fetchone()
     assert n12 == 0
@@ -243,7 +243,7 @@ def main() -> int:
     rel = b[b.observed_flag == "reliable"]
     both = rel[rel.national_flag == "reliable"].copy()
     both["vs_adjusted"] = both.observed - both.national_rate - both.state_adjustment
-    big_gap = both.reindex(both.vs_adjusted.abs().sort_values(ascending=False).index)
+    big_gap = both.reindex(both.vs_adjusted.abs().sort_values(ascending=False, kind="stable").index)
     n_far = int((both.vs_adjusted.abs() > 5).sum())
     low = rel.nsmallest(5, "observed")
     high = rel.nlargest(5, "observed")

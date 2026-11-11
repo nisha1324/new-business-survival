@@ -1,18 +1,40 @@
 # New-business survival in Australia: which industries and regions new businesses last in
 
-**Status: work in progress (Parts 1-4 of 5 done: source profile, industries, regions, SQL layer and benchmark).**
+[![CI](https://github.com/nisha1324/new-business-survival/actions/workflows/ci.yml/badge.svg)](https://github.com/nisha1324/new-business-survival/actions/workflows/ci.yml)
+
+**Status: complete.** Five parts: source profile, industries, regions, a DuckDB SQL layer with a survival
+benchmark, and CI that reruns every report on each push and fails if any output changes.
 
 About half of the businesses that start trading in Australia in a given year are no longer trading three
-Junes later. That rate is
-not the same everywhere. It depends on the industry, the state and, above all, on whether the business employs
-anyone. This project uses the Australian Bureau of Statistics' official business counts to answer three
-questions for people who back, plan for or advise new businesses:
+Junes later. That rate is not the same everywhere. It depends on the industry, on whether the business employs
+anyone and, to a smaller degree, on the state. This project uses the Australian Bureau of Statistics' official
+business counts to answer three questions for people who back, plan for or advise new businesses:
 
 - **A lender or investor:** how likely is a new business in this industry, state and size band to still be
   trading after three years, and how sure can we be of that figure?
 - **A council or state agency:** where is the number of businesses growing or shrinking, and in which industries?
 - **A small-business adviser:** which industries have the weakest early survival, once you compare businesses of
   the same size?
+
+## TL;DR
+
+- **About half of new businesses are still trading three Junes later.** Of the 406,365 businesses that entered in
+  2022-23, 49.2% were still trading at June 2026, against 50.8% for the 2019-20 entrants. Survival fell in 16 of 19
+  industries, and not because of a shift towards businesses without staff: −1.8 points of the fall happened inside the size bands.
+- **Businesses with staff last longer, everywhere.** 44.6% of non-employing entrants were still trading at June
+  2026, against 61.5% of employing entrants. Entrants with 1-4 employees out-survived non-employing ones in all 85
+  state × industry pairs where both are reliable (median gap +16.6 points).
+- **Industry still matters once size is held constant.** Reliable national rates for an industry and size band run
+  from 30.3% to 70.9%. Transport, Postal and Warehousing is lowest in the latest cohort (37.4%). At the national size
+  mix, Accommodation and Food Services falls from 10th to 4th lowest (48.4% → 41.9%).
+- **The state fine-tunes the rate; it doesn't replace it.** Tasmania kept 6.0 points more of its 2021-22 entrants
+  than its mix predicts; New South Wales kept 1.4 points fewer, the weakest of the 8 states on that basis.
+  Victoria's weak 2021-22 cohort is mostly mix.
+- **A rising business count isn't a growing local economy.** Business numbers grew by 139,482 across LGAs, but
+  non-employing businesses grew by 149,180 and employing businesses fell by 9,698. 199 of the 303 LGAs lost
+  employing businesses even though only 31 lost businesses overall.
+- **The benchmark turns this into one number with a reliability flag** for each state × industry × size band. It
+  covers 97.9% of the 441,808 entrants, and `scripts/benchmark_lookup.py` prints any cell in plain English.
 
 ## Data
 
@@ -185,6 +207,67 @@ range considered, not set the price. For entrants with 5+ employees this release
 too perturbed to use. Analysts can query the views from any DuckDB client, but should check how much of
 any sum sits in small cells before trusting it.
 
+## Part 5: CI and a pinned environment
+
+Every push runs [`.github/workflows/ci.yml`](.github/workflows/ci.yml): it installs `requirements-lock.txt` (the
+exact package versions the committed outputs were made with), reruns the four reports from the committed snapshot
+with no download, fails if any report, CSV or chart differs from the committed file by a single byte, and then runs
+the test suite. So a figure in this README can't drift from the code without the build going red. The one test CI
+skips is the rebuild from the raw ABS workbooks, which aren't committed; it runs wherever
+`scripts/download_data.py` has been run.
+
+## Recommendations
+
+In rough order of priority, each with the figure behind it and an owner.
+
+1. **Lenders and investors: price a new business on its industry and size band, not the national average.**
+   Reliable national rates for an industry and size band run from 30.3% to 70.9%; the state adjustment then moves
+   them by −1.4 points to +6.0 points. Start from the benchmark (`scripts/benchmark_lookup.py`). *Owner: credit
+   risk / underwriting.*
+2. **Credit policy: keep the reliability flag in the credit file.** A "use with care" rate should widen the range
+   considered, not set the price. For entrants with 5+ employees there is a benchmark in only 15 of 152 cells, so
+   use the state's exact all-industry rate for them. *Owner: credit policy.*
+3. **Small-business advisers: put support in the first year, aimed at entrants without staff in the weakest
+   industries.**
+   In every industry, 45% to 52% of the 2022-23 entrants that had stopped trading by the third June had already
+   stopped by the first. Non-employing entrants survive less often (44.6% against 61.5% for employing entrants),
+   and the weak spots include Transport, Postal and Warehousing (37.4% of all its 2022-23 entrants) and
+   non-employing entrants in Food and Beverage Services (35.2%). *Owner: business advisory programmes and state
+   small-business agencies.*
+4. **Councils: track employing businesses, not the total count.** 199 of the 303 LGAs lost employing businesses
+   even though only 31 lost businesses overall, and in the 20 fastest-growing LGAs 91.8% of the net increase
+   employed no one. The employing counts are in the same ABS cube, so this costs nothing extra. *Owner: council
+   economic development teams.*
+5. **State agencies: compare states after their industry × size mix.** On that basis New South Wales is the
+   weakest state (1.4 points below what its mix predicts), while Victoria's 2021-22 dip is 65% mix. Tasmania's
+   +6.0 points is the result worth understanding first. *Owner: state small-business commissioners.*
+6. **Retail lenders and industry bodies: find out why Retail Trade fell the most.** Its survival fell from 52.3%
+   to 46.2% (−6.1 points) between the 2019-20 and 2022-23 cohorts, the largest fall of any industry, so rates
+   from older cohorts overstate how long new retailers last now. *Owner: sector teams in lending; retail industry associations.*
+7. **Analysts: refresh in December and check small cells before summing.** The 2026 detail is due on
+   18 December 2026. Summing perturbed cells read up to 27.1 points low (NT, 5+); where at most 10% of entrants are
+   in cells of 20 or fewer, the sum is within 0.86 points. *Owner: whoever maintains the benchmark.*
+
+## Limitations
+
+1. **Still trading isn't the same as profitable, and an exit isn't a failure.** An exit can be a sale, a
+   restructure or a business that stopped remitting GST. The benchmark says nothing about profit or loan repayment.
+2. **Not every entry is a start-up.** 28.5% to 31.7% of entries each year are re-activations or businesses coming
+   into scope, and a business that opens and closes between two 30 Junes is never counted.
+3. **The detail covers one cohort.** The industry × size, state-after-mix and benchmark figures are for 2021-22
+   entrants to June 2025, and an industry's rate moved by up to 7.7 points across the four cohorts.
+4. **The detailed cube is perturbed.** Even reliable rates are sums of perturbed cells, read up to 0.86 points
+   low, and entrants with 5+ employees are too thin to benchmark by industry.
+5. **The mix adjustments remove industry division and size only.** The common-mix rate is a what-if, not a
+   forecast. A state's adjustment is whatever its mix doesn't explain (finer industry detail, local costs, the
+   owners themselves), so it isn't a measure of state policy.
+6. **The state adjustment was checked on the cohort it was built from.** Its fit over the 192 reliable cells is
+   in-sample; it hasn't yet been tested on a later cohort.
+7. **No survival below state level.** LGAs are compared on counts only, and a business operating in several places
+   is counted in one area.
+8. **Releases revise groups.** Industry and state figures moved by a median of 0.10% between releases, so a year's
+   figures can shift slightly when the next release comes out.
+
 ## Plan
 
 | Part | What | Status |
@@ -193,20 +276,20 @@ any sum sits in small cells before trusting it.
 | 2 | Industries: survival within size bands, a common-size-mix comparison, subdivisions above the floor, cohort trends | done |
 | 3 | Regions: state survival across four cohorts, states after their industry × size mix, LGA growth in business numbers | done |
 | 4 | A DuckDB SQL layer and a benchmark table for lenders and advisers (industry × state × size, with reliability flags) | done |
-| 5 | CI, recommendations, limitations and write-up | next |
+| 5 | CI with a pinned environment, TL;DR, recommendations, limitations | done |
 
 ## How to run
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-lock.txt   # exact versions; requirements.txt for a looser install
 
 python scripts/profile_source.py      # Part 1 report and charts from the committed snapshot
 python scripts/industry_survival.py   # Part 2 report and charts
 python scripts/regions_report.py      # Part 3 report and charts
 python scripts/benchmark_report.py    # Part 4: runs sql/ in DuckDB, writes the benchmark, report and charts
 python scripts/benchmark_lookup.py construction Vic non-employing   # one benchmark, in plain English
-python -m pytest                      # tests
+pytest                                # tests
 
 # optional: rebuild the snapshot from the ABS files
 python scripts/download_data.py       # 7 workbooks into data/raw/ (hash-checked)
@@ -232,11 +315,13 @@ scripts/benchmark_lookup.py the benchmark for one industry, state and size band
 data/                       the tidy snapshot (survival, flows, subdivision_survival, lga_counts)
 results/                    reports, CSVs and charts
 tests/                      parser tests on hand-made sheets, snapshot invariants, report checks
+.github/workflows/ci.yml    rerun the four reports, fail on any change, then pytest
+requirements-lock.txt       exact package versions the committed outputs were made with
 ```
 
 ## Tests
 
-128 tests: Part 1's cover the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
+175 tests: Part 1's cover the parsers on hand-made sheets (including a perturbed row whose sizes don't add up), the snapshot's
 invariants (entry cohorts equal that year's entries, start + entries − exits = end for every industry, every
 subdivision maps to an ANZSIC division, LGA totals equal the national count), the profile measures on hand-made
 frames, the real figures the report relies on, and a byte-for-byte regeneration of the Part 1 report, CSVs and
@@ -273,6 +358,16 @@ pandas, the fit check on real and hand-made rows (including a tie), the lookup, 
 the Part 4 outputs. 14 planted bugs in `sql/` and the lookup were tried: 13 were caught at first, and the survivor
 (a tie counted as "closer") now has a hand-made test. 21 planted errors in this README's Part 4 text were tried; 20 were caught at
 first, and the survivor ("read high" for "read low") now has an exact check.
+
+Part 5 adds 50 tests. `tests/test_determinism.py` (3) guards against what the first CI run caught: NumPy's
+default sort is unstable and picks a CPU-specific code path, so on GitHub's runner tied rows (LGAs with equal
+growth, industries with equal rates, two labels for the same revised count) came out in a different order. Every
+sort is now stable, a test checks that, and another reruns the four reports with NumPy's optional CPU extensions
+switched off and compares every output byte for byte. `tests/test_readme_summary.py` (47) holds the TL;DR,
+recommendations and limitations to Parts 1-4: they may only repeat figures stated there, each figure is tied to
+the same subject, the rules they quote match the code and the SQL, CI reruns every report in How to run, and the
+lock file pins every requirement. 24 planted errors in those sections (changed figures, swapped subjects, a
+missing owner, a new unbacked figure) were tried, and all 24 were caught.
 
 ## Credit
 
